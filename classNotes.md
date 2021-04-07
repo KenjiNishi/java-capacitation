@@ -14,6 +14,6 @@ Lecture 1 - Introductions to the course and to Scrum methodology.
 Lecture 2 - Version control
 
 * Historic, centralized repositories (past generations - SVN) versus distributed repositories (3rd gen - Git).
-* 
+this is a modification
 
 
