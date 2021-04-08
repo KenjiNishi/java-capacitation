@@ -1,4 +1,6 @@
 [DontPad](http://dontpad.com/seniorgodev)
+[Social Links](http://dontpad.com/SeniorProway)
+[SciHub](https://sci-hub.se/)
 
 # Lecture 1 - Introductions to the course and to Scrum methodology. 
 
@@ -12,10 +14,6 @@
 	- Elton
 
 # Lecture 2 - Version control
-
-* Historic, centralized repositories (past generations - SVN) versus distributed repositories (3rd gen - Git).
-
-* Java components presentations - Team04 was responsible for presenting [JIT Compiler](https://docs.google.com/presentation/d/1F2gPMmFa3KbFyW4-7ZT_f6JearyrBoTbzCOL936p1xA/edit?usp=sharing). Other links on DontPad.
 
 Groups:
 
@@ -68,5 +66,37 @@ Grupo 6 - Java SE / Java EE
 - Leo Pereira
 https://drive.google.com/file/d/1SA0reofxriofRSMvSJmFVXy9sJSrsiM9/view?usp=sharing
 ```
+# Lecture 3 - Java and Requirements specification (IEEE 830)
+
+[Pretty good Vim Cheatsheet](https://files.passeidireto.com/d9165dcc-aaaf-436b-a49c-5144904e9155/d9165dcc-aaaf-436b-a49c-5144904e9155.png)
+
+[Another Vim cheatsheet](https://hamwaves.com/vim.tutorial/images/vim.tutorial.svg)
+
+[Hackerspace Blumenau event - Flisol](https://www.hackerspaceblumenau.org/flisol/)
+
+[Refactoring guru](https://refactoring.guru/)
+
+[IEEE 830](https://sci-hub.se/10.1109/ieeestd.1998.88286)
+
+What: Functional requirements, prioritary definition. User Stories.
+
+How : Non-functional requirements.
+
+* Functionality
+* External Interfacing
+* Performance
+* Attributes
+* Design constraints imposed on implementation
+
+For planning User Stories, use the client language and aim for it be I.N.V.E.S.T. 
+* Independent
+* Negotiable
+* Valuable
+* Estimatable
+* Small
+* Testable
+
+
+
 
 
