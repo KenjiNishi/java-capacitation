@@ -96,7 +96,9 @@ For planning User Stories, use the client language and aim for it be I.N.V.E.S.T
 * Small
 * Testable
 
+# Lecture 4 - Requirement specification and Java
 
+[Team04 Trello - Work Time Management](https://trello.com/b/eOqMwjQf/seniorgodev-controle-de-ponto)
 
 
 
