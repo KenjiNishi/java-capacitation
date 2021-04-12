@@ -96,9 +96,15 @@ For planning User Stories, use the client language and aim for it be I.N.V.E.S.T
 * Small
 * Testable
 
-# Lecture 4 - Requirement specification and Java
+# Lecture 4 - Requirement specification and Java variables
 
 [Team04 Trello - Work Time Management](https://trello.com/b/eOqMwjQf/seniorgodev-controle-de-ponto)
 
-
-
+# Lecture 5 - Java 
+* Selection loops (if, switch)
+* Ternary operators
+* Repetition loops (for, forEach, while, doWhile)
+* Break and continue keywords
+* Type conversion
+* Methods
+* Recursivity
