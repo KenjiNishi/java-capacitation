@@ -101,6 +101,7 @@ For planning User Stories, use the client language and aim for it be I.N.V.E.S.T
 [Team04 Trello - Work Time Management](https://trello.com/b/eOqMwjQf/seniorgodev-controle-de-ponto)
 
 # Lecture 5 - Java 
+
 * Selection loops (if, switch)
 * Ternary operators
 * Repetition loops (for, forEach, while, doWhile)
@@ -108,3 +109,5 @@ For planning User Stories, use the client language and aim for it be I.N.V.E.S.T
 * Type conversion
 * Methods
 * Recursivity
+
+- Coding the project.
