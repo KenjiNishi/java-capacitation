@@ -100,7 +100,45 @@ For planning User Stories, use the client language and aim for it be I.N.V.E.S.T
 
 [Team04 Trello - Work Time Management](https://trello.com/b/eOqMwjQf/seniorgodev-controle-de-ponto)
 
-# Lecture 5 - Java 
+PRIMITIVE TYPES
+
+ * byte 2^7
+ * short 2^16
+ * int 2^31
+ * long 2^63
+
+ * float 32bits
+ * double 64bits
+
+ * boolean = true/false
+ * char = 'a'
+
+NON-PRIMITIVES
+ 
+ * Arrays [] = {term1, term2, term3}
+ * String = "text"
+
+## Primitive type conversion:
+
+* From a higher type to lower is implicit
+
+order : byte > short > int > long > float > double
+
+ex:
+
+	byte lowerVar = 1
+	int higherVar = lowerVar
+
+* From a lower type to higher it must be explicit (casting)
+
+order: double > float > long > int > short > byte
+
+ex:
+
+	long higherVar = 1
+	int lowerVar = (int) higherVar
+
+# Lecture 5 - Java and Coding the Project 
 
 * Selection loops (if, switch)
 * Ternary operators
@@ -110,4 +148,62 @@ For planning User Stories, use the client language and aim for it be I.N.V.E.S.T
 * Methods
 * Recursivity
 
+
 - Coding the project.
+
+# Lecture 6 - Test Driven Development
+
+* Waterfall method: Project management focused on the whole. End-to-end. Steps must follow the same order, every time. Testing is only done right before implementation. At this time, it usually becomes too costly to fix the errors that originated in the previous steps.
+
+* TDD: Test Driven Development. Every feature can be tested multiple times at multiple steps. Usually in an automated way.
+
+## Types of tests:
+* Unit testing - Test the minimum functional component.
+* Interface testing - Tests the interaction between two components. Closer to unit testing, checks data-formats and basic interactions between systems.
+* Integration testing - Or instrumentalized, tests large parts of the system together on an end-to-end way. Usually uses a bot to do the inputs for testing.
+* Usability and acception tests - Tested by potential clients to assure non-functional components.
+* Performance, stability and security tests
+
+Costs from highest to lowest:
+
+* Manual
+* Integration
+* API
+* Interface
+* Unit
+
+Test quantity is inversely proportional to cost (So aim for few manual tests and a LOT of unit testing).
+
+## Test Driven Development - steps
+
+Testing first ideology!
+
+![](https://www.whizlabs.com/wp-content/uploads/2016/04/TDD.png)
+
+<img src="https://camo.githubusercontent.com/1ecf6454ca714393baa268987a98d3e4aefb0ef7ac21c513f0aff139d2bab8d1/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f302f30622f5444445f476c6f62616c5f4c6966656379636c652e706e67" width="800"/>
+
+### Unit testing
+* Smallest testable unit (method)
+* Fast
+* Automatable
+* Independent
+* Repeatable
+* Easy to implement
+* Kept for future use
+* Click rule - No inputs from tester.
+
+### Java docs
+```
+/**
+* myFunc -  Description
+*
+* details, details, details
+*
+* @param name_a type description
+* @param name_b type description
+* @return type description
+*/
+public int myFunc(int name_a, int name_b){
+    ...
+}
+```

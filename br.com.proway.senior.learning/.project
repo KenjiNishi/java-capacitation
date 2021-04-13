@@ -14,4 +14,26 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/br/com/proway/senior/learning/Justificativas.java</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/senior-proway-controle-ponto/ArquivosJava/Justificativas.java</locationURI>
+		</link>
+		<link>
+			<name>src/br/com/proway/senior/learning/Notificacoes.java</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/senior-proway-controle-ponto/ArquivosJava/Notificacoes.java</locationURI>
+		</link>
+		<link>
+			<name>src/br/com/proway/senior/learning/RegistroPonto.java</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/senior-proway-controle-ponto/ArquivosJava/RegistroPonto.java</locationURI>
+		</link>
+		<link>
+			<name>src/br/com/proway/senior/learning/RegistroPontoMacro.java</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/senior-proway-controle-ponto/ArquivosJava/RegistroPontoMacro</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
