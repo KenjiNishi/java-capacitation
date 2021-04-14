@@ -207,3 +207,51 @@ public int myFunc(int name_a, int name_b){
     ...
 }
 ```
+# Lecture 7 - Sprint Review, Sprint Retrospective
+
+[ScreentoGif - Windows tool](https://www.screentogif.com/)
+
+<img src="https://www.visual-paradigm.com/servlet/editor-content/scrum/scrum-in-3-minutes/sites/7/2018/11/the-agile-scrum-framework-1.png"/>
+
+## Sprint Planning
+
+* What should be done this sprint;
+* Estimate cost;
+
+## Daily Stand up Meeting
+
+Duration: ~15min
+
+* What was done yesterday;
+* What to do today;
+* Difficulties;
+
+
+## Sprint Review - Presenting results
+
+Duration: ~1hr
+
+* What was done;
+* What wasn't done;
+* What was added;
+* What was removed;
+
+## Sprint Retrospective - Looking back
+
+Duration: ~1hr
+
+* What went right;
+* What went wrong;
+* What have we learned;
+* What to do differently and how;
+
+Questions of note:
+
+* What should we keep doing;
+* What to do more;
+* What should we start doing;
+* What should not be done;
+* What should be done less;
+
+<img src="https://bryanmmathers.com/wp-content/uploads/2018/06/the-starfish-model.png" width="600"/>
+
