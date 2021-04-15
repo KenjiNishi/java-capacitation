@@ -255,3 +255,12 @@ Questions of note:
 
 <img src="https://bryanmmathers.com/wp-content/uploads/2018/06/the-starfish-model.png" width="600"/>
 
+# Lecture 8 - New Teams for Sprint 2
+
+My new team: 6 - Vacation Management
+* Daniella Lira
+* Willian K.
+* Bruna
+* Jonata
+* Leo Pereira
+
