@@ -255,7 +255,7 @@ Questions of note:
 
 <img src="https://bryanmmathers.com/wp-content/uploads/2018/06/the-starfish-model.png" width="600"/>
 
-# Lecture 8 - New Teams for Sprint 2
+# Lecture 8 - New Teams for Sprint 2, Object Oriented Programming - OOP
 
 My new team: 6 - Vacation Management
 * Daniella Lira
@@ -263,5 +263,34 @@ My new team: 6 - Vacation Management
 * Bruna
 * Jonata
 * Leo Pereira
+
+## Object Oriented Programming with Java
+
+An Object is a representation of a concept, defined by its caracteristics, methods and properties. Objects are independent of other object instances.
+
+The pillars of OOP:
+
+* Abstraction
+* Encapsulation
+* Inheritance
+* Polymorphism
+
+### Abstraction
+
+Isolating a determined aspect of a state with the goal of simplifying it's analysis, classification or communication. Solving a set of related problems regardless of values (eg: a+b instead of 2+2 in code)
+
+* An abstract data does not consider aspects of the implementation, being responsible for defining a specific data type;
+
+### Encapsulation
+
+### Inheritance
+
+### Polimorphism
+
+## Classes
+
+Abstraction focuses on: Identity, Attributes and Behaviors. In programming, thats represented by Classes. Classes can be understood as 'blueprints' from where objects are created (instanciated), an abstraction.
+
+### Inheritance
 
 

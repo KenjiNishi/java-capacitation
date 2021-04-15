@@ -1,13 +1,13 @@
-package br.com.proway.senior.learning;
+package learning;
 
-// Lecture 04 - HANDS ON JAVA
+//Lecture 04 - HANDS ON JAVA
 
 /* 
- * The final keyword is a non-access modifier and can be used on
- * Classes (Prevents inheritance), 
- * Variables (constant) and 
- * Methods (Prevents overwrites). 
- */
+* The final keyword is a non-access modifier and can be used on
+* Classes (Prevents inheritance), 
+* Variables (constant) and 
+* Methods (Prevents overwrites). 
+*/
 final public class MyClass {
 	
 	private static String name = "Will";
@@ -64,7 +64,7 @@ final public class MyClass {
 		boolean condition = true;
 		if (condition) {
 			// Instancing the class inside itself so we can use non-static methods.
-			var instance = new MyClass();
+			MyClass instance = new MyClass();
 			instance.printTheBestGuy();
 		}
 		else {
@@ -76,7 +76,7 @@ final public class MyClass {
 		* Shift+alt+A -> enter Block Selection Mode
 		* Shift+DownArrow -> Column selection in Block Selection Mode
 		*/
-		var s_y = 0;
+		byte s_y = 0;
 		byte s_z = 3;
 		byte s_x = 1;
 		
@@ -140,9 +140,9 @@ final public class MyClass {
 		} while (condition);
 		
 		// Calling a static function
-		System.out.println("Static method return: " + staticFunc(null));
+		System.out.println("Static method return with 'default' value: " + staticFunc(null));
 		
-		System.out.println("Testing recursive with 3: " + recursive(3));
+		System.out.println("Testing recursive with 3 resulting in: " + recursive(3));
 		
 	}
 	
