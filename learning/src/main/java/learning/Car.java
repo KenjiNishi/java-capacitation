@@ -2,9 +2,31 @@ package learning;
 
 public class Car {
 	Double engine;
-	Double fuelLevel = 0.0;
-	Double velocity = 0.0;
-	boolean isRunning = false;
+	Double fuelLevel;
+	Double velocity;
+	boolean isRunning;
+	
+	/**
+	 * Default creator
+	 * @return Car object with default values
+	 */
+	public Car() {
+		engine = 1.0;
+		fuelLevel = 0.0;
+		velocity = 0.0;
+		isRunning = false;
+	}
+	
+	/**
+	 * Constructor to specify engine power, other parameters are defaults
+	 * @param _engine = Engine power eg: 1.0
+	 */
+	public Car(Double _engine) {
+		engine = _engine;
+		fuelLevel = 0.0;
+		velocity = 0.0;
+		isRunning = false;
+	}
 	
 	/**
 	 * Checks if there is at least 1 unit of fuel necessary to actuate the car.
@@ -18,6 +40,16 @@ public class Car {
 			isRunning = false;
 			return false;
 		}
+	}
+	
+	/**
+	 * Sets the Car's fuelLevel
+	 * @param _fuel
+	 * @return success state (true/false)
+	 */
+	public boolean setFuel(Double _fuel) {
+		fuelLevel = _fuel;
+		return true
 	}
 	
 	public double getEnginePower() {

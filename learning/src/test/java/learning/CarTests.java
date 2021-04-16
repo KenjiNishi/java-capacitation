@@ -28,7 +28,7 @@ public class CarTests {
 
 	@Test
 	public void TurnOnMultipleCars() {
-		Car tecow = new Car();
+		Car tecow = new Car(2.0);
 		tecow.fuelLevel = startingFuel;
 		Car ticow = new Car();
 		ticow.fuelLevel = startingFuel;
@@ -41,11 +41,14 @@ public class CarTests {
 	@Test
 	public void AccelerateCar() {
 		Car dummy = new Car();
+		
+		Double enginePower = dummy.getEnginePower();
 		dummy.fuelLevel = startingFuel;
 		
 		dummy.startEngine();
 		dummy.accelerate();
-		assertTrue(dummy.velocity > 0);
+		
+		assertEquals(dummy.velocity, enginePower );
 	}
 	
 	@Test
