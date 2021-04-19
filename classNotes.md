@@ -280,12 +280,7 @@ The pillars of OOP:
 Isolating a determined aspect of a state with the goal of simplifying it's analysis, classification or communication. Solving a set of related problems regardless of values (eg: a+b instead of 2+2 in code)
 
 * An abstract data does not consider aspects of the implementation, being responsible for defining a specific data type;
-
-### Encapsulation
-
-### Inheritance
-
-### Polimorphism
+https://drive.google.com/file/d/1HEoEsMW45BxGrSetZDwDfzSafa98eGNW/view?usp=sharing 
 
 ## Classes
 
@@ -293,4 +288,47 @@ Abstraction focuses on: Identity, Attributes and Behaviors. In programming, that
 
 ### Inheritance
 
+# Lecture 9 - Sprint development
+
+# Lecture 10 - OOP part 2
+
+### Inheritance
+
+Using the keyword "extends" we can inherit all vars and methods from a class.
+
+In the child constructor, "super()" represents the parent's implementation.
+
+To avoid inheritance, the keyword 'final' can be used. Final methods/classes cannot be inherited. The 'final' keyword can increase efficiency (compilation) and safety (critical classes are protected).
+
+### Encapsulation
+
+Provides access modifiers to methods and variables in a class. They are:
+
+* default
+* public
+* private
+* protected
+* static
+* final
+* abstract
+
+### Polimorphism
+
+* Ad Hoc > Overloading and Coersion
+* Universal > Parametric Subtyped
+
+Overridden (Overloaded) methods are checked on compilation time and allow different behaviors for the same method.
+
+* Generic type<T> : Represent a class that will use different/unspecified Classes/Types. The type variable T can be used anywhere in the class. 
+
+When using the generic class the desired type can be specified. 
+
+eg:
+* Declare class TransportationMethod <T>
+* Instantiate with TransportationMethod <Car> or TransportationMethod<Bike>
+
+
+* Abstract classes: Cannot be instantiated, can be inherited. Not all methods are defined.
+
+* Interfaces : Classes can have the keyword 'implements' to use Interfaces that are responsible for representing a completely abstract class; In other words, the class that implements the interface is responsible for defining the implementation of the Interface Methods
 
