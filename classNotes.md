@@ -332,3 +332,12 @@ eg:
 
 * Interfaces : Classes can have the keyword 'implements' to use Interfaces that are responsible for representing a completely abstract class; In other words, the class that implements the interface is responsible for defining the implementation of the Interface Methods
 
+# Lecture 12 - Sprint Review and Retrospective 2
+
+Learning from our mistakes: 
+
+* Document first - Trello, JavaDocs, GoogleDocs
+* Define class and constructor
+* Prepare tests
+* Code class methods
+
