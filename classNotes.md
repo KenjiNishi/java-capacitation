@@ -349,6 +349,14 @@ Learning from our mistakes:
 * Prepare tests
 * Code class methods
 
+New Group Vacations Control:
+
+- Guilherme Eduardo Bom Guse
+- Janaina Mai
+- Lucas Walin
+- Thiago Luiz Barbieri
+- Willian Kenji Nishizawa
+
 # Lecture 13 - SOLID Programming Principles and Software Architecture
 ![](https://amitshahi.dev/static/500403c0fabdd69504307a79a5417fd9/be90f/solid.jpg)
 
@@ -367,3 +375,62 @@ Program focusing on Interfaces and Single Responsability, not in Inheritance so 
 * Model - Business Logic, Data, State
 * View - UI Representation
 * Controller - Coordinate the interactions between Model and View;
+
+# Lecture 14 - Design Patterns
+
+Dependencies can be of two types, a Class Dependency or a functional dependency, when we need to instantiate another class.
+
+Injecting a dependency happens when the external class is called as an argument (either in the costructor or in a method), having been created outside the caller class.
+
+A parametric injection is a method responsible for creating the external class, Java Anotations can do this. 
+
+**To avoid having to call a specific class we can call ANY CLASS THAT HAS X INTERFACE. This makes our base class not depend on a low level abstraction (class) but a high level one (interface).**
+
+In projects, Design patterns are solutions to:
+
+* Purpose
+* Motivation
+* Class Structure
+* Code examples
+
+But it brings problems of:
+
+* Wrong tool
+* Dogma
+* Wrong (programming) language
+
+The Design Pattern Gang of Four: Authors of the Design Patters Elements of Reusable Object-Oriented Software.
+
+Pattern classifications:
+
+* Creational patterns: Object creation
+* Structural patterns: Objects and Classes in larger structures - Acts where we are calling the class, not in the class itself.
+* Behavioral patterns: Efficient communication and responsability assignment among objects.
+
+[The gang of four project patterns](https://refactoring.guru):
+
+* TODO: Fix this table
+
+| Creational Patterns | Structural Patterns | Behavioral Patterns | 
+| ------------------- | ------------------- | ------------------- |
+| Singleton           | Decorator           | Chain of Responsability|
+| Factory Builder     | Adapter             | Command             |
+| Builder             | Bridge              | Interpreter         |
+| Prototype           | Composite           | Iterator            |
+| Abstract Factory    | Facade              | Mediator            |
+| ----                | Abstract Factory    | Memento             |
+| ----                | ----                | Observer            |
+| ----                |	----		    | State               |
+| ----                | ----                | Stratedy            |
+| ----                | ----                | Template Method     |
+| ----                | ----                | Visitor             |
+
+
+Looking at some patterns:
+
+* Singleton: Garantees only one object is instantiated from the class. eg: The class has a instance of itself with a private constructor, but this instance can be accessed from outside. A database instance should usually be a Singleton.
+
+* Factory: Create objects without specifying the concrete Classes. 
+
+
+
