@@ -290,6 +290,8 @@ Abstraction focuses on: Identity, Attributes and Behaviors. In programming, that
 
 # Lecture 9 - Sprint development
 
+[Lecture](https://docs.google.com/presentation/d/1aiAtylecvORpbwhDvmJ_OeFxTekZHIamVBIwWpLdv1A/edit#slide=id.g6b98d5a515_0_29)
+
 # Lecture 10 - OOP part 2
 
 ### Inheritance
@@ -332,6 +334,12 @@ eg:
 
 * Interfaces : Classes can have the keyword 'implements' to use Interfaces that are responsible for representing a completely abstract class; In other words, the class that implements the interface is responsible for defining the implementation of the Interface Methods
 
+# Lecture 13 - Sprint execution ; Programming.
+
+Preparing presentation for Sprint2; Merging branches;
+
+![](https://trello-attachments.s3.amazonaws.com/607dec3f7d28ef0a5bc11283/1137x284/9b5a9aa071625e17f7d089b67f5bd307/image.png)
+
 # Lecture 12 - Sprint Review and Retrospective 2
 
 Learning from our mistakes: 
@@ -341,3 +349,21 @@ Learning from our mistakes:
 * Prepare tests
 * Code class methods
 
+# Lecture 13 - SOLID Programming Principles and Software Architecture
+![](https://amitshahi.dev/static/500403c0fabdd69504307a79a5417fd9/be90f/solid.jpg)
+
+* **S**ingle Responsability : Classes and Methods should focus on doing one thing well instead of several poorly;
+* **O**pen/Closed Principle : Class is OPEN to be used, but CLOSED to be modified by others; Use Interfaces!
+* **L**iskov Substitution Principle : Using a child class instead of the parent class in a function should be fine; Dont change the return type in child classes to keep this principle.
+* **I**nterface Segregation : Data Interfaces between classes should be divided in small parts; A Class shouldn't need to define functions taht it doesn't need!
+* **D**ependency Inversion Principle :  High-Level-Modules should not depend on Low-Level-Modules implementation detais, both should use Abstractions (Interfaces) and these abstractions should not depend on Details (concrete implementations);
+
+Program focusing on Interfaces and Single Responsability, not in Inheritance so we can avoid using Generics <T>
+
+## Model View Controller - MVC Architecture
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh0NQKdspWr2txLb3FdjBTfFPC9n4R-Eeq3g&usqp=CAU)
+
+* Model - Business Logic, Data, State
+* View - UI Representation
+* Controller - Coordinate the interactions between Model and View;

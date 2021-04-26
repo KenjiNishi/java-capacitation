@@ -47,9 +47,14 @@ public class Car {
 	 * @param _fuel
 	 * @return success state (true/false)
 	 */
-	public boolean setFuel(Double _fuel) {
+	protected boolean setFuel(Double _fuel) {
 		fuelLevel = _fuel;
-		return true
+		return true;
+	}
+	
+	protected boolean setVelocity(Double _velocity) {
+		velocity = _velocity;
+		return true;
 	}
 	
 	public double getEnginePower() {
@@ -69,7 +74,7 @@ public class Car {
 		}
 		else {
 			if (checkFuel()){
-				fuelLevel-= getEnginePower();
+				setFuel(fuelLevel- getEnginePower());
 				isRunning = true;
 			} 
 			else {
@@ -90,7 +95,7 @@ public class Car {
 		if (this.isRunning && checkFuel() ) {
 			System.out.println("Going VRROOOOOOMMMMMMMMMMMMMM!");
 			velocity+= getEnginePower();
-			fuelLevel-= getEnginePower();
+			setFuel(fuelLevel- getEnginePower());
 		}
 		else {
 			System.out.println("Acceleration failed! No fuel or the car is turned off");
