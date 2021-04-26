@@ -409,13 +409,11 @@ Pattern classifications:
 
 [The gang of four project patterns](https://refactoring.guru):
 
-* TODO: Fix this table
-
 | Creational Patterns | Structural Patterns | Behavioral Patterns | 
 | ------------------- | ------------------- | ------------------- |
 | Singleton           | Decorator           | Chain of Responsability|
 | Factory Builder     | Adapter             | Command             |
-| Builder             | Bridge              | Interpreter         |
+| Builder & Director  | Bridge              | Interpreter         |
 | Prototype           | Composite           | Iterator            |
 | Abstract Factory    | Facade              | Mediator            |
 | ----                | Abstract Factory    | Memento             |
@@ -430,7 +428,14 @@ Looking at some patterns:
 
 * Singleton: Garantees only one object is instantiated from the class. eg: The class has a instance of itself with a private constructor, but this instance can be accessed from outside. A database instance should usually be a Singleton.
 
-* Factory: Create objects without specifying the concrete Classes. 
+* Factory: Create objects without specifying the concrete Classes. A factory class is an abstract class with methods to instantiate or remove other objects. It can aggregate creation methods of classes that have more in common than not, in other words, the factory has some methods that are defined, and some abstract to implement specific behavior.
 
+* Builder: Instantiate complex objects in a set-by-step manner. Usually the Builder will be a Interface that sets the steps but expect the specific implementation from each class. Responsible for trating the data that will be thrown in the object constructor.
 
+* Director: Responsible for calling Builders for different instantiations. Works as a "supervisor" to the Builder for different 'set models of objects' that are specified (via parameters) by the Director.
 
+* Prototype: Copies objects without worrying about the types. Can be implemented with the use of a "Object" type and Reflections. Create object then it's abstractions. eg: A single "clone" method can clone any Class that implements the prototype interface.
+
+* Decorator: Uses wrappers to add new functionalities to the objects. Used as a Class that implements Wrapees interfaces. Acts as a MiddleMan between the super class and the outside of the class. In its functions there is usually a call to the "super()" version of itself. Think of those russian dolls.
+
+* DAO - Data Access Object: Not a Design Pattern, it's a Middleman between controllers and DB, APIs, etc...
