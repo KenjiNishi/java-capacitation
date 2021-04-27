@@ -1,5 +1,5 @@
 [DontPad](http://dontpad.com/seniorgodev)
-[Social Links](http://dontpad.com/SeniorProway)
+[Lecture Slides](http://dontpad.com/SeniorProway)
 [SciHub](https://sci-hub.se/)
 
 # Lecture 1 - Introductions to the course and to Scrum methodology. 
@@ -438,4 +438,6 @@ Looking at some patterns:
 
 * Decorator: Uses wrappers to add new functionalities to the objects. Used as a Class that implements Wrapees interfaces. Acts as a MiddleMan between the super class and the outside of the class. In its functions there is usually a call to the "super()" version of itself. Think of those russian dolls.
 
-* DAO - Data Access Object: Not a Design Pattern, it's a Middleman between controllers and DB, APIs, etc...
+* DAO - Data Access Object: Not a Design Pattern, it's a Middleman between controllers and DB, APIs, etc...  The Controller should never instantiate a Model, the DAO is the one responsible for granting it access to the data.
+
+
