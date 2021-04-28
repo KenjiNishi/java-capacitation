@@ -440,4 +440,6 @@ Looking at some patterns:
 
 * DAO - Data Access Object: Not a Design Pattern, it's a Middleman between controllers and DB, APIs, etc...  The Controller should never instantiate a Model, the DAO is the one responsible for granting it access to the data.
 
+# Lecture 15 - Spring Review and Retrospective
+
 
