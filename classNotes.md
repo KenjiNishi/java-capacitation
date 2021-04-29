@@ -407,7 +407,7 @@ Pattern classifications:
 * Structural patterns: Objects and Classes in larger structures - Acts where we are calling the class, not in the class itself.
 * Behavioral patterns: Efficient communication and responsability assignment among objects.
 
-[The gang of four project patterns](https://refactoring.guru):
+[The Gang Of Four Project Patterns](https://refactoring.guru):
 
 | Creational Patterns | Structural Patterns | Behavioral Patterns | 
 | ------------------- | ------------------- | ------------------- |
@@ -440,9 +440,31 @@ Looking at some patterns:
 
 * DAO - Data Access Object: Not a Design Pattern but a Structural Pattern, it's a Middleman between controllers and DB, APIs, etc...  The Controller should never instantiate a Model, the DAO is the one responsible for granting it access to the data.
 
-# Lecture 15 - Spring Reviews and Retrospectives
+# Lecture 15 - Sprint Reviews and Retrospectives
 
 # Lecture 16 - Relational Database PostgreSQL
 
+[Official PostgreSQL 13.2 Documentation](https://www.postgresql.org/files/documentation/pdf/13/postgresql-13-A4.pdf)
 
+The first implementation of SQL was in 1973 with IBM's System R. The relational model came right after, in 1974 with Ingres - INteractive Graphics REtrieval System.
 
+PostgreSQL came into existence as POSTQUEL in 1985 as a licenced software. The project was ended in 1994 in its 4.2 Version.
+
+In 1995 Postgres95 returned as a Open Source Project, in 1997 it was renamed to PostgreSQL and it is still in development today, the PostgreSQL Version 13 being released in 2020.
+
+## Relational Model - Architecture
+
+* Table (Relations or entities)
+* Register (Row or tuple)
+* Column (Attribute)
+* Key (Primary / Foreign - Identifier)
+
+## Data Modelling
+
+* Functional Dependency - Identify the unique Attribute/Column that defines the Register/Row and is unique in the Table.  eg. CPF number is a good key for a person, since its a unique identification.
+
+* Normalization : Second Normal Form 2FN - Atomic attributes, a cell can only hold a single value.  1. Identify data that doesnt depend on the primary key -  2. create a new table for them.  eg. Instead of listing several phone numbers in a column inside the Person Table, create a new Phone Numbers table and reference it on the Person Table via a FK.
+
+* Normalization: Third Normal Form 3FN - All the attributes in a table must be functionally independent from one another while being exclusively dependent on the primary key. 1. Identify dependent attributes, 2. Exclude dependent attributes.
+
+* 
