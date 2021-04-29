@@ -438,8 +438,11 @@ Looking at some patterns:
 
 * Decorator: Uses wrappers to add new functionalities to the objects. Used as a Class that implements Wrapees interfaces. Acts as a MiddleMan between the super class and the outside of the class. In its functions there is usually a call to the "super()" version of itself. Think of those russian dolls.
 
-* DAO - Data Access Object: Not a Design Pattern, it's a Middleman between controllers and DB, APIs, etc...  The Controller should never instantiate a Model, the DAO is the one responsible for granting it access to the data.
+* DAO - Data Access Object: Not a Design Pattern but a Structural Pattern, it's a Middleman between controllers and DB, APIs, etc...  The Controller should never instantiate a Model, the DAO is the one responsible for granting it access to the data.
 
-# Lecture 15 - Spring Review and Retrospective
+# Lecture 15 - Spring Reviews and Retrospectives
+
+# Lecture 16 - Relational Database PostgreSQL
+
 
 
