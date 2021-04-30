@@ -521,12 +521,8 @@ HCM Development Coordinator - Silvana Aparecida Da Silva <silvana.silva@senior.c
 
 ## Comparison Operators
 
-* >
-* >=
-* <
-* <=
-* <>
-* =
+* >, >=, <, <=
+* <>, =
 * BETWEEN - Selects values within a given range.
 * LIKE - Used in a WHERE clause to search for a specified pattern in a column.
 * IN -  Specify multiple values in a WHERE clause.
