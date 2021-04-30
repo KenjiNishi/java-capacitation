@@ -1,5 +1,8 @@
 [DontPad](http://dontpad.com/seniorgodev)
+
+
 [Lecture Slides](http://dontpad.com/SeniorProway)
+
 [SciHub](https://sci-hub.se/)
 
 # Lecture 1 - Introductions to the course and to Scrum methodology. 
@@ -450,7 +453,7 @@ New Group1 - Employee Register
 - Lucas Nunes
 - Willian K
 
-# Lecture 16 - Relational Database PostgreSQL
+# Lecture 16 - Relational Database PostgreSQL - Structured Query Language
 
 [Official PostgreSQL 13.2 Documentation](https://www.postgresql.org/files/documentation/pdf/13/postgresql-13-A4.pdf)
 
@@ -475,4 +478,64 @@ In 1995 Postgres95 returned as a Open Source Project, in 1997 it was renamed to 
 
 * Normalization: Third Normal Form 3FN - All the attributes in a table must be functionally independent from one another while being exclusively dependent on the primary key. 1. Identify dependent attributes, 2. Exclude dependent attributes.
 
-* 
+# Lecture 17 - PostgreSQL, PgAdmin4 and Database Modelling
+
+Senior Sistemas visitor: 
+
+HCM Development Coordinator - Silvana Aparecida Da Silva <silvana.silva@senior.com.br>
+
+[Classifying SQL Statements](https://www.geeksforgeeks.org/sql-ddl-dql-dml-dcl-tcl-commands/)
+
+[PostgreSQL Introduction](https://www.edureka.co/blog/postgresql-tutorial)
+
+![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190826175059/Types-of-SQL-Commands.jpg)
+
+## Verbs
+
+* SELECT
+* INSERT
+* UPDATE - Updates records. Data **Manipulation** Language
+* DELETE
+* CREATE
+* ALTER - Add, Delete or Modify the attributes of a Table. Data **Definition** Language
+* DROP - Not reversible data destruction
+* GRANT - User permissions
+* REVOKE - User Permissions
+* COMMIT
+* ROLLBACK
+
+## Clauses
+
+* FROM
+* WHERE - Query criteria
+* GROUP BY - Groups rows that have the same values into summary rows
+* HAVING - Was added to SQL because the WHERE keyword cannot be used with aggregate functions. Checks for a *condition*.
+* ORDER BY - Sort the result-set in ascending or descending order.
+* DISTINCT - Return only distinct (different) values.
+
+## Logic Operators
+
+* AND
+* OR
+* NOT
+
+## Comparison Operators
+
+* >
+* >=
+* <
+* <=
+* <>
+* =
+* BETWEEN - Selects values within a given range.
+* LIKE - Used in a WHERE clause to search for a specified pattern in a column.
+* IN -  Specify multiple values in a WHERE clause.
+
+## Agregation on a property
+
+* AVG
+* COUNT
+* SUM
+* MAX
+* MIN
+
