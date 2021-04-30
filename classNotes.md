@@ -442,6 +442,14 @@ Looking at some patterns:
 
 # Lecture 15 - Sprint Reviews and Retrospectives
 
+New Group1 - Employee Register
+
+- Vanderlei
+- Guilherme Ezequiel
+- David W
+- Lucas Nunes
+- Willian K
+
 # Lecture 16 - Relational Database PostgreSQL
 
 [Official PostgreSQL 13.2 Documentation](https://www.postgresql.org/files/documentation/pdf/13/postgresql-13-A4.pdf)
