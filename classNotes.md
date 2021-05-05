@@ -565,4 +565,6 @@ Java Database Connectivity (JDBC) is an application programming interface (API) 
 
 # Lecture 19 - Finishing up Databases with JDBC and DAOs
 
+# Lecture 20 - Presentations and Senior Guests
 
+From HCM, DeBarba (architect) and XXXXX (manager).
