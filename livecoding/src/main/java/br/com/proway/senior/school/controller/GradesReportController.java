@@ -55,7 +55,7 @@ public class GradesReportController {
 	 */
 	public void addAssessment(Assessment test) {
 		AssessmentController assController = new AssessmentController(test);
-		if(test.getId() != null) {
+		if(test.getId() == null) {
 			assController.add();
 		}
 		else {
@@ -67,18 +67,19 @@ public class GradesReportController {
 	
 	/**
 	 * Removes the CouseTest located at the desired index of the List of Tests.
-	 * @param index : int
+	 * @param index : Integer
 	 */
-	public void removeCourseTest(int index) {
+	public void removeCourseTest(Integer index) {
 		AssessmentController assController = new AssessmentController(index);
-		assController.remove();
-		try {
-			this.report.getListOfTests().remove(index);
-			this.calculateMeanOfTests();
-		}catch(Exception e){
-			System.out.println(e.getMessage());
+		if(index <= this.report.getListOfTests().size()-1) {
+			try {
+				this.report.getListOfTests().remove((int) index);
+				assController.remove();
+				this.calculateMeanOfTests();
+			}catch(Exception e){
+				System.out.println(e.getMessage());
+			}
 		}
-		
 	}
 	
 	/**

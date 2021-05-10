@@ -23,8 +23,8 @@ public class AssessmentController {
 	}
 	
 	public Assessment add() {
-		if(this.test.getId() != null) {
-			return this.assDAO.add(this.test);	
+		if(this.test.getId() == null) {
+			return this.assDAO.add(this.test);
 		}
 		return this.test;
 	}

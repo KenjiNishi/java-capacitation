@@ -63,11 +63,11 @@ public class GradesReportControllerTest {
 	}
 	
 	@Test
-	public void testRemoveCourseTestByObject() throws Exception {
+	public void testRemoveNonExistentCourseTest() throws Exception {
 		controller.clearCourseTests();
 		controller.addAssessment(test);
-		controller.removeCourseTest(test.getId());
-		assertEquals(0, gr.getListOfTests().size());
+		controller.removeCourseTest(42);
+		assertEquals(1, gr.getListOfTests().size());
 	}
 	
 	@Test
