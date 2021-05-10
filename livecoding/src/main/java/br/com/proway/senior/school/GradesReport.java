@@ -24,10 +24,10 @@ public class GradesReport implements IGradesReport{
 	private Integer period;
 	private ArrayList<Assessment> listOfTests;
 	
-	public void setID(int value) {
+	public void setId(int value) {
 		this.id = value;
 	}
-	public int getID() {
+	public int getId() {
 		return this.id;
 	}
 	/** Returns a new GradesReport
