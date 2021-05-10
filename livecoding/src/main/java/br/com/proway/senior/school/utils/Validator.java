@@ -1,4 +1,4 @@
-package br.com.proway.senior.utils;
+package br.com.proway.senior.school.utils;
 
 /**
  * Tool class for Validating parameters.

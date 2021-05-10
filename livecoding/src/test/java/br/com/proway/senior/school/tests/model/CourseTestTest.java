@@ -1,4 +1,4 @@
-package br.com.proway.senior.school;
+package br.com.proway.senior.school.tests.model;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -6,8 +6,12 @@ import static org.junit.Assert.assertNotNull;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import br.com.proway.senior.school.Asessment;
+import br.com.proway.senior.school.Course;
+import br.com.proway.senior.school.Student;
+
 public class CourseTestTest {
-	static Avaliation test;
+	static Asessment test;
 	static int periodParam = 202105;
 
 	@BeforeClass
@@ -16,7 +20,7 @@ public class CourseTestTest {
 		Course course = new Course();
 		Student student = new Student();
 		
-		test = new Avaliation(period, student, course, 1.0);
+		test = new Asessment(period, student, course, 1.0);
 	}
 	
 	@Test

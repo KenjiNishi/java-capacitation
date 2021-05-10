@@ -3,13 +3,13 @@ package br.com.proway.senior.school;
 import java.util.ArrayList;
 
 /**
- *  Gathers information from all {@link Avaliation}s from a {@link Student}.
+ *  Gathers information from all {@link Asessment}s from a {@link Student}.
  *  
- *  Contains a list of {@link Avaliation}s with reference to a Period.
+ *  Contains a list of {@link Asessment}s with reference to a Period.
  *  For each period a mean of all the grades will be calculated and saved on the
  *  GradesReport.
  *  
- *  @see Avaliation
+ *  @see Asessment
  *  @see Student
  *  
  * @author Willian Kenji Nishizawa <wk.nishizawa@gmail.com>
@@ -19,7 +19,7 @@ public class GradesReport {
 	private Double meanGrade;
 	private Student student;
 	private Integer period;
-	private ArrayList<Avaliation> listOfTests;
+	public ArrayList<Asessment> listOfTests;
 	
 	/** Returns a new GradesReport
 	 * 
@@ -33,25 +33,9 @@ public class GradesReport {
 		super();
 		this.setStudent(student);
 		this.setPeriod(period);
-		this.listOfTests = new ArrayList<Avaliation>();
+		this.listOfTests = new ArrayList<Asessment>();
 	}
-	
 
-	/**
-	 * Calculates the mean of the CourseTests grades.
-	 */
-	private void calculateMeanOfTests() {
-		Double sum = 0.0;
-		Double weight = 0.0;
-		if(this.getListOfTests().size() > 0){
-			for(Avaliation course : this.getListOfTests()) {
-				sum+=course.getGrade() * course.getWeight();
-				weight += course.getWeight();
-			}
-			setMeanGrade(sum/weight);
-		}
-		else setMeanGrade(sum/weight);
-	}
 	
 	/**
 	 * Returns the mean value of all the CourseTests grades.
@@ -65,7 +49,7 @@ public class GradesReport {
 	 * Sets the mean value of all the CourseTests grades.
 	 * @param grade : Double
 	 */
-	private void setMeanGrade(Double grade) {
+	public void setMeanGrade(Double grade) {
 		this.meanGrade = grade;
 	}
 	
@@ -105,45 +89,8 @@ public class GradesReport {
 	 * Retuns the List containing all the tests related to the Report.
 	 * @return
 	 */
-	public ArrayList<Avaliation> getListOfTests() {
+	public ArrayList<Asessment> getListOfTests() {
 		return this.listOfTests;
 	}
-	
-	/**
-	 * Adds a new CourseTest to the List of Tests taken by the student.
-	 * @param test
-	 */
-	public void addCourseTest(Avaliation test) {
-		this.listOfTests.add(test);
-		this.calculateMeanOfTests();
-	}
-	
-	/**
-	 * Removes a CourseTest from the List of Tests taken by the student.
-	 * 
-	 * @param test : CourseTest
-	 */
-	public void removeCourseTest(Avaliation test) {
-		this.listOfTests.remove(test);
-		this.calculateMeanOfTests();
-	}
-	
-	/**
-	 * Removes the CouseTest located at the desired index of the List of Tests.
-	 * @param index : int
-	 */
-	public void removeCourseTest(int index) {
-		this.listOfTests.remove(index);
-		this.calculateMeanOfTests();
-	}
-	
-	/**
-	 *  Clears the ListOfTests by instantiating it anew.
-	 */
-	public void clearCourseTests() {
-		this.listOfTests = new ArrayList<Avaliation>();
-		this.calculateMeanOfTests();
-	}
-
 	
 }

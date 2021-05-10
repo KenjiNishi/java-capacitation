@@ -1,6 +1,6 @@
 package br.com.proway.senior.school;
 
-import br.com.proway.senior.utils.Validator;
+import br.com.proway.senior.school.utils.Validator;
 
 /**
  * A Test that validates if the {@link Student} has the minimum knowledge in a 
@@ -13,7 +13,7 @@ import br.com.proway.senior.utils.Validator;
  * @author Willian Kenji Nishizawa <wk.nishizawa@gmail.com>
  *
  */
-public class Avaliation {
+public class Asessment {
 	Integer period;
 	Double grade;
 	Student student;
@@ -28,7 +28,7 @@ public class Avaliation {
 	 * @param course The course related to this test
 	 * @param weight Weight of the evaluation for calculating the mean
 	 */
-	public Avaliation(Integer period, Student student, Course course, Double weight) {
+	public Asessment(Integer period, Student student, Course course, Double weight) {
 		this.setPeriod(period);
 		this.setStudent(student);
 		this.setCourse(course);

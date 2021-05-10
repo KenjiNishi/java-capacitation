@@ -1,0 +1,82 @@
+package br.com.proway.senior.school.tests.controller;
+
+import static org.junit.Assert.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import br.com.proway.senior.school.Asessment;
+import br.com.proway.senior.school.Course;
+import br.com.proway.senior.school.GradesReport;
+import br.com.proway.senior.school.Student;
+import br.com.proway.senior.school.controller.GradesReportController;
+
+public class GradesReportControllerTest {
+	static GradesReportController controller;
+	static GradesReport gr;
+	static Asessment test;
+	static Asessment test2;
+	
+	private static int defaultPeriod = 202105;
+	
+	@BeforeClass
+	public static void setUpTests() throws Exception{
+		Student student = new Student();
+		Integer period = defaultPeriod;
+		gr = new GradesReport(student, period);
+		
+		Course course = new Course();
+		test = new Asessment(gr.getPeriod(), gr.getStudent(), course, 1.0);
+		test2 = new Asessment(gr.getPeriod(), gr.getStudent(), course, 1.0);
+		try {
+			test.setGrade(10.00);
+			test2.setGrade(5.00);
+		}
+		catch(Exception e) {
+			fail(e.getMessage());
+		}
+		
+		controller = new GradesReportController(gr);
+	}
+	
+	@Test
+	public void testGetMeanGrades() {
+		controller.clearCourseTests();
+		controller.addCourseTest(test);
+		controller.addCourseTest(test2);
+		assertEquals(7.50, gr.getMeanGrade(), 0.01);
+	}
+
+	@Test
+	public void testAddCourseTest() throws Exception {
+		controller.addCourseTest(test);
+		assertEquals(1, (int) gr.getListOfTests().size());
+	}
+	
+	@Test
+	public void testRemoveCourseTest() throws Exception {
+		controller.clearCourseTests();
+		controller.addCourseTest(test);
+		controller.removeCourseTest(0);
+		
+		assertEquals(0, gr.getListOfTests().size());
+	}
+	
+	@Test
+	public void testRemoveCourseTestByObject() throws Exception {
+		controller.clearCourseTests();
+		controller.addCourseTest(test);
+		controller.removeCourseTest(test);
+		
+		assertEquals(0, gr.getListOfTests().size());
+	}
+	
+	@Test
+	public void testClearListOfCourseTest() throws Exception {
+		controller.addCourseTest(test);
+		controller.clearCourseTests();
+		
+		assertFalse(gr.getListOfTests().size()>0);
+	}
+
+}

@@ -1,8 +1,10 @@
-package br.com.proway.senior.school;
+package br.com.proway.senior.school.tests.model;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import br.com.proway.senior.school.Student;
 
 public class StudentTest {
 

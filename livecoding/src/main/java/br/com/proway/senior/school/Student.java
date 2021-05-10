@@ -1,6 +1,6 @@
 package br.com.proway.senior.school;
 
-import br.com.proway.senior.utils.Validator;
+import br.com.proway.senior.school.utils.Validator;
 
 /**
  * <h1>Person that studies at the school.</h1>
