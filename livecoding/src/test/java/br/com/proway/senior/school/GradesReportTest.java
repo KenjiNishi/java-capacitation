@@ -36,8 +36,8 @@ public class GradesReportTest {
 	public void testGetMeanGrades() {
 		gr.clearCourseTests();
 		Course course = new Course();
-		CourseTest test = new CourseTest(defaultPeriod, gr.getStudent(), course);
-		CourseTest test2 = new CourseTest(defaultPeriod, gr.getStudent(), course);
+		Avaliation test = new Avaliation(defaultPeriod, gr.getStudent(), course);
+		Avaliation test2 = new Avaliation(defaultPeriod, gr.getStudent(), course);
 		gr.addCourseTest(test);
 		gr.addCourseTest(test2);
 		try {
@@ -53,7 +53,7 @@ public class GradesReportTest {
 	@Test
 	public void testAddCourseTest() {
 		Course course = new Course();
-		CourseTest test = new CourseTest(defaultPeriod, gr.getStudent(), course);
+		Avaliation test = new Avaliation(defaultPeriod, gr.getStudent(), course);
 		gr.addCourseTest(test);
 		
 		assertEquals(1, (int) gr.getListOfTests().size());
@@ -62,7 +62,7 @@ public class GradesReportTest {
 	@Test
 	public void testRemoveCourseTest() {
 		Course course = new Course();
-		CourseTest test = new CourseTest(defaultPeriod, gr.getStudent(), course);
+		Avaliation test = new Avaliation(defaultPeriod, gr.getStudent(), course);
 		gr.clearCourseTests();
 		gr.addCourseTest(test);
 		gr.removeCourseTest(0);
@@ -73,7 +73,7 @@ public class GradesReportTest {
 	@Test
 	public void testRemoveCourseTestByObject() {
 		Course course = new Course();
-		CourseTest test = new CourseTest(defaultPeriod, gr.getStudent(), course);
+		Avaliation test = new Avaliation(defaultPeriod, gr.getStudent(), course);
 		gr.clearCourseTests();
 		gr.addCourseTest(test);
 		gr.removeCourseTest(test);
@@ -84,7 +84,7 @@ public class GradesReportTest {
 	@Test
 	public void testClearListOfCourseTest() {
 		Course course = new Course();
-		CourseTest test = new CourseTest(defaultPeriod, gr.getStudent(), course);
+		Avaliation test = new Avaliation(defaultPeriod, gr.getStudent(), course);
 		gr.addCourseTest(test);
 		gr.clearCourseTests();
 		

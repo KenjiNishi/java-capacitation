@@ -13,7 +13,7 @@ import br.com.proway.senior.utils.Validator;
  * @author Willian Kenji Nishizawa <wk.nishizawa@gmail.com>
  *
  */
-public class CourseTest {
+public class Avaliation {
 	Integer period;
 	Double grade;
 	Student student;
@@ -26,7 +26,7 @@ public class CourseTest {
 	 * @param student Student that took this test
 	 * @param course The course related to this test
 	 */
-	public CourseTest(Integer period, Student student, Course course) {
+	public Avaliation(Integer period, Student student, Course course) {
 		this.setPeriod(period);
 		this.setStudent(student);
 		this.setCourse(course);

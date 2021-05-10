@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class CourseTestTest {
-	static CourseTest test;
+	static Avaliation test;
 	static int periodParam = 202105;
 
 	@BeforeClass
@@ -16,7 +16,7 @@ public class CourseTestTest {
 		Course course = new Course();
 		Student student = new Student();
 		
-		test = new CourseTest(period, student, course);
+		test = new Avaliation(period, student, course);
 	}
 	
 	@Test
