@@ -5,17 +5,18 @@ import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import br.com.proway.senior.school.Asessment;
+import br.com.proway.senior.school.Assessment;
 import br.com.proway.senior.school.Course;
 import br.com.proway.senior.school.GradesReport;
 import br.com.proway.senior.school.Student;
 import br.com.proway.senior.school.controller.GradesReportController;
+import br.com.proway.senior.school.interfaces.IGradesReport;
 
 public class GradesReportControllerTest {
 	static GradesReportController controller;
 	static GradesReport gr;
-	static Asessment test;
-	static Asessment test2;
+	static Assessment test;
+	static Assessment test2;
 	
 	private static int defaultPeriod = 202105;
 	
@@ -26,8 +27,8 @@ public class GradesReportControllerTest {
 		gr = new GradesReport(student, period);
 		
 		Course course = new Course();
-		test = new Asessment(gr.getPeriod(), gr.getStudent(), course, 1.0);
-		test2 = new Asessment(gr.getPeriod(), gr.getStudent(), course, 1.0);
+		test = new Assessment(gr.getPeriod(), gr.getStudent(), course, 1.0);
+		test2 = new Assessment(gr.getPeriod(), gr.getStudent(), course, 1.0);
 		try {
 			test.setGrade(10.00);
 			test2.setGrade(5.00);

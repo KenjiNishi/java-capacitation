@@ -13,7 +13,7 @@ import br.com.proway.senior.school.utils.Validator;
  * @author Willian Kenji Nishizawa <wk.nishizawa@gmail.com>
  *
  */
-public class Asessment {
+public class Assessment {
 	Integer period;
 	Double grade;
 	Student student;
@@ -28,7 +28,7 @@ public class Asessment {
 	 * @param course The course related to this test
 	 * @param weight Weight of the evaluation for calculating the mean
 	 */
-	public Asessment(Integer period, Student student, Course course, Double weight) {
+	public Assessment(Integer period, Student student, Course course, Double weight) {
 		this.setPeriod(period);
 		this.setStudent(student);
 		this.setCourse(course);

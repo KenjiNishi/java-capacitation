@@ -2,7 +2,8 @@ package br.com.proway.senior.school.controller;
 
 import java.util.ArrayList;
 
-import br.com.proway.senior.school.Asessment;
+import br.com.proway.senior.school.Assessment;
+import br.com.proway.senior.school.AssessmentDAO;
 import br.com.proway.senior.school.GradesReport;
 
 public class GradesReportController {
@@ -22,7 +23,7 @@ public class GradesReportController {
 		if(!this.report.getListOfTests().isEmpty()){
 			Double sum = 0.0;
 			Double weight = 0.0;
-			for(Asessment course : this.report.getListOfTests()) {
+			for(Assessment course : this.report.getListOfTests()) {
 				sum+=course.getGrade() * course.getWeight();
 				weight += course.getWeight();
 			}
@@ -36,8 +37,9 @@ public class GradesReportController {
 	 * Adds a new CourseTest to the List of Tests taken by the student.
 	 * @param test
 	 */
-	public void addCourseTest(Asessment test) {
-		this.report.listOfTests.add(test);
+	public void addCourseTest(Assessment test) {
+		AssessmentDAO assessDAO = new AssessmentDAO(this.report);
+		assessDAO.add(test);
 		this.calculateMeanOfTests();
 	}
 	
@@ -46,8 +48,9 @@ public class GradesReportController {
 	 * 
 	 * @param test : CourseTest
 	 */
-	public void removeCourseTest(Asessment test) {
-		this.report.listOfTests.remove(test);
+	public void removeCourseTest(Assessment test) {
+		AssessmentDAO assessDAO = new AssessmentDAO(this.report);
+		assessDAO.remove(test);
 		this.calculateMeanOfTests();
 	}
 	
@@ -56,7 +59,8 @@ public class GradesReportController {
 	 * @param index : int
 	 */
 	public void removeCourseTest(int index) {
-		this.report.listOfTests.remove(index);
+		AssessmentDAO assessDAO = new AssessmentDAO(this.report);
+		assessDAO.remove(index);
 		this.calculateMeanOfTests();
 	}
 	
@@ -64,7 +68,8 @@ public class GradesReportController {
 	 *  Clears the ListOfTests by instantiating it anew.
 	 */
 	public void clearCourseTests() {
-		this.report.listOfTests = new ArrayList<Asessment>();
+		AssessmentDAO assessDAO = new AssessmentDAO(this.report);
+		assessDAO.removeAll();
 		this.calculateMeanOfTests();
 	}
 }

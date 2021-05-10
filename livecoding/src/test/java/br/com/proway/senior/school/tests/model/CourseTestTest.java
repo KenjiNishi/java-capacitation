@@ -6,12 +6,12 @@ import static org.junit.Assert.assertNotNull;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import br.com.proway.senior.school.Asessment;
+import br.com.proway.senior.school.Assessment;
 import br.com.proway.senior.school.Course;
 import br.com.proway.senior.school.Student;
 
 public class CourseTestTest {
-	static Asessment test;
+	static Assessment test;
 	static int periodParam = 202105;
 
 	@BeforeClass
@@ -20,7 +20,7 @@ public class CourseTestTest {
 		Course course = new Course();
 		Student student = new Student();
 		
-		test = new Asessment(period, student, course, 1.0);
+		test = new Assessment(period, student, course, 1.0);
 	}
 	
 	@Test

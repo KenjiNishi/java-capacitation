@@ -2,24 +2,26 @@ package br.com.proway.senior.school;
 
 import java.util.ArrayList;
 
+import br.com.proway.senior.school.interfaces.IGradesReport;
+
 /**
- *  Gathers information from all {@link Asessment}s from a {@link Student}.
+ *  Gathers information from all {@link Assessment}s from a {@link Student}.
  *  
- *  Contains a list of {@link Asessment}s with reference to a Period.
+ *  Contains a list of {@link Assessment}s with reference to a Period.
  *  For each period a mean of all the grades will be calculated and saved on the
  *  GradesReport.
  *  
- *  @see Asessment
+ *  @see Assessment
  *  @see Student
  *  
  * @author Willian Kenji Nishizawa <wk.nishizawa@gmail.com>
  *
  */
-public class GradesReport {
+public class GradesReport implements IGradesReport{
 	private Double meanGrade;
 	private Student student;
 	private Integer period;
-	public ArrayList<Asessment> listOfTests;
+	public ArrayList<Assessment> listOfTests;
 	
 	/** Returns a new GradesReport
 	 * 
@@ -33,64 +35,38 @@ public class GradesReport {
 		super();
 		this.setStudent(student);
 		this.setPeriod(period);
-		this.listOfTests = new ArrayList<Asessment>();
+		this.listOfTests = new ArrayList<Assessment>();
 	}
-
-	
-	/**
-	 * Returns the mean value of all the CourseTests grades.
-	 * @return meanGrade : Double
-	 */
 	public Double getMeanGrade() { 
 		return this.meanGrade;
 	}
 	
-	/**
-	 * Sets the mean value of all the CourseTests grades.
-	 * @param grade : Double
-	 */
 	public void setMeanGrade(Double grade) {
 		this.meanGrade = grade;
 	}
 	
-	/**
-	 * Returns the Student responsible for the tests shown in the Report.
-	 * @return
-	 */
 	public Student getStudent() {
 		return this.student;
 	}
 	
-	/**
-	 * Sets the student responsible for the tests shown in the Report.
-	 * @param student
-	 */
-	private void setStudent(Student student) {
+	public void setStudent(Student student) {
 		this.student = student;
 	}
 	
-	/**
-	 * Gets the period from the Report Grades.
-	 * @return
-	 */
 	public Integer getPeriod() {
 		return this.period;
 	}
 	
-	/**
-	 * Sets the period respective to the Report Grade.
-	 * @param period
-	 */
-	private void setPeriod(Integer period) {
+	public void setPeriod(Integer period) {
 		this.period = period;
 	}
-
-	/**
-	 * Retuns the List containing all the tests related to the Report.
-	 * @return
-	 */
-	public ArrayList<Asessment> getListOfTests() {
+	
+	public ArrayList<Assessment> getListOfTests() {
 		return this.listOfTests;
+	}
+	public void setListOfTests(ArrayList<Assessment> list) {
+		this.listOfTests = list;
+		
 	}
 	
 }
