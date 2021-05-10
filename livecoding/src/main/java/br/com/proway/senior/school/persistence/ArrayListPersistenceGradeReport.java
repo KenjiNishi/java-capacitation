@@ -8,7 +8,7 @@ public class ArrayListPersistenceGradeReport extends ArrayListPersistence<Grades
 	ArrayList<GradesReport> data;
 	
 	@Override
-	boolean removeAll() {
+	public boolean removeAll() {
 		try{
 			this.data.clear();
 		}catch (Exception e) {
@@ -19,7 +19,7 @@ public class ArrayListPersistenceGradeReport extends ArrayListPersistence<Grades
 	}
 
 	@Override
-	boolean remove(Integer indexItem) {
+	public boolean remove(Integer indexItem) {
 		try{
 			this.data.remove((int) indexItem);
 		}catch (Exception e) {
@@ -30,7 +30,7 @@ public class ArrayListPersistenceGradeReport extends ArrayListPersistence<Grades
 	}
 
 	@Override
-	GradesReport add(GradesReport item) {
+	public GradesReport add(GradesReport item) {
 		try{
 			Integer id = this.data.size();
 			item.setId(id);
@@ -43,7 +43,7 @@ public class ArrayListPersistenceGradeReport extends ArrayListPersistence<Grades
 	}
 
 	@Override
-	GradesReport get(Integer index) {
+	public GradesReport get(Integer index) {
 		try{
 			return this.data.get(index);
 		}catch (Exception e) {
@@ -53,7 +53,7 @@ public class ArrayListPersistenceGradeReport extends ArrayListPersistence<Grades
 	}
 
 	@Override
-	ArrayList<GradesReport> getAll() {
+	public ArrayList<GradesReport> getAll() {
 		try{
 			return this.data;
 		}catch (Exception e) {

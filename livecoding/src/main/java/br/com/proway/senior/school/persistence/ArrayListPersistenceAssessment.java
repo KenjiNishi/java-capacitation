@@ -9,7 +9,7 @@ public class ArrayListPersistenceAssessment extends ArrayListPersistence<Assessm
 	public ArrayList<Assessment> data;
 	
 	@Override
-	boolean removeAll() {
+	public boolean removeAll() {
 		try{
 			this.data.clear();
 		}catch (Exception e) {
@@ -20,7 +20,7 @@ public class ArrayListPersistenceAssessment extends ArrayListPersistence<Assessm
 	}
 
 	@Override
-	boolean remove(Integer indexItem) {
+	public boolean remove(Integer indexItem) {
 		try{
 			this.data.remove((int) indexItem);
 		}catch (Exception e) {
@@ -31,7 +31,7 @@ public class ArrayListPersistenceAssessment extends ArrayListPersistence<Assessm
 	}
 
 	@Override
-	Assessment add(Assessment item) {
+	public Assessment add(Assessment item) {
 		try{
 			Integer id = data.size();
 			item.setId(id);
@@ -44,7 +44,7 @@ public class ArrayListPersistenceAssessment extends ArrayListPersistence<Assessm
 	}
 
 	@Override
-	Assessment get(Integer index) {
+	public Assessment get(Integer index) {
 		try{
 			return this.data.get(index);
 		}catch (Exception e) {
@@ -54,7 +54,7 @@ public class ArrayListPersistenceAssessment extends ArrayListPersistence<Assessm
 	}
 
 	@Override
-	ArrayList<Assessment> getAll() {
+	public ArrayList<Assessment> getAll() {
 		try{
 			return this.data;
 		}catch (Exception e) {

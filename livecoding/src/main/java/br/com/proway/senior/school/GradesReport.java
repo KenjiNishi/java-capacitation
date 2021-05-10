@@ -18,16 +18,16 @@ import br.com.proway.senior.school.interfaces.IGradesReport;
  *
  */
 public class GradesReport implements IGradesReport{
-	private int id;
+	private Integer id;
 	private Double meanGrade;
 	private Student student;
 	private Integer period;
 	private ArrayList<Assessment> listOfTests;
 	
-	public void setId(int value) {
+	public void setId(Integer value) {
 		this.id = value;
 	}
-	public int getId() {
+	public Integer getId() {
 		return this.id;
 	}
 	/** Returns a new GradesReport

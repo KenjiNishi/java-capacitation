@@ -14,7 +14,7 @@ import br.com.proway.senior.school.utils.Validator;
  *
  */
 public class Assessment {
-	int id;
+	Integer id;
 	Integer period;
 	Double grade;
 	Student student;
@@ -36,10 +36,10 @@ public class Assessment {
 		this.setWeight(weight);
 	}
 	
-	public void setId(int value) {
+	public void setId(Integer value) {
 		this.id = value;
 	}
-	public int getId() {
+	public Integer getId() {
 		return this.id;
 	}
 	

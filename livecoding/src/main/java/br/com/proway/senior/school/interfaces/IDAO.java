@@ -4,10 +4,8 @@ public interface IDAO<T> {
 	public void removeAll();
 
 	public void remove(int index);
-	
-	public void remove(T entry);
 
-	public void add(T entry);
+	public T add(T entry);
 	
-	//public void update(int id, T entry);
+	public T get(int id);
 }
