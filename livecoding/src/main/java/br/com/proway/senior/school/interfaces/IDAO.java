@@ -8,4 +8,6 @@ public interface IDAO<T> {
 	public void remove(T entry);
 
 	public void add(T entry);
+	
+	//public void update(int id, T entry);
 }

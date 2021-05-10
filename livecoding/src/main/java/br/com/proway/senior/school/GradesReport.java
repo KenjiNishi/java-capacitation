@@ -18,11 +18,18 @@ import br.com.proway.senior.school.interfaces.IGradesReport;
  *
  */
 public class GradesReport implements IGradesReport{
+	private int id;
 	private Double meanGrade;
 	private Student student;
 	private Integer period;
-	public ArrayList<Assessment> listOfTests;
+	private ArrayList<Assessment> listOfTests;
 	
+	public void setID(int value) {
+		this.id = value;
+	}
+	public int getID() {
+		return this.id;
+	}
 	/** Returns a new GradesReport
 	 * 
 	 * The report is created from a student and a period. The mean is calculated

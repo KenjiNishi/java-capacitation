@@ -36,7 +36,6 @@ public class GradesReportControllerTest {
 		catch(Exception e) {
 			fail(e.getMessage());
 		}
-		
 		controller = new GradesReportController(gr);
 	}
 	
@@ -59,7 +58,6 @@ public class GradesReportControllerTest {
 		controller.clearCourseTests();
 		controller.addCourseTest(test);
 		controller.removeCourseTest(0);
-		
 		assertEquals(0, gr.getListOfTests().size());
 	}
 	
@@ -68,7 +66,6 @@ public class GradesReportControllerTest {
 		controller.clearCourseTests();
 		controller.addCourseTest(test);
 		controller.removeCourseTest(test);
-		
 		assertEquals(0, gr.getListOfTests().size());
 	}
 	
@@ -76,7 +73,6 @@ public class GradesReportControllerTest {
 	public void testClearListOfCourseTest() throws Exception {
 		controller.addCourseTest(test);
 		controller.clearCourseTests();
-		
 		assertFalse(gr.getListOfTests().size()>0);
 	}
 

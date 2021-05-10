@@ -6,6 +6,9 @@ import br.com.proway.senior.school.Assessment;
 import br.com.proway.senior.school.Student;
 
 public interface IGradesReport {
+	public void setID(int value);
+	public int getID();
+	
 	/**
 	 * Returns the mean value of all the CourseTests grades.
 	 * @return meanGrade : Double
