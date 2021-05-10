@@ -90,7 +90,7 @@ public class GradesReportController {
 		
 		for(Assessment test : tests) {
 			AssessmentController assessController = new AssessmentController(test);
-			assessController.remove();	
+			assessController.remove();
 		}
 		this.report.getListOfTests().clear();
 		this.calculateMeanOfTests();

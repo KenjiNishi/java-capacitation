@@ -15,6 +15,7 @@ import br.com.proway.senior.school.interfaces.IGradesReport;
 public class GradesReportControllerTest {
 	static GradesReportController controller;
 	static GradesReport gr;
+	
 	static Assessment test;
 	static Assessment test2;
 	
@@ -63,7 +64,7 @@ public class GradesReportControllerTest {
 	}
 	
 	@Test
-	public void testRemoveNonExistentCourseTest() throws Exception {
+	public void testRemoveNonExistentCourseTest() thr ows Exception {
 		controller.clearCourseTests();
 		controller.addAssessment(test);
 		controller.removeCourseTest(42);
@@ -74,7 +75,7 @@ public class GradesReportControllerTest {
 	public void testClearListOfCourseTest() throws Exception {
 		controller.addAssessment(test);
 		controller.clearCourseTests();
-		assertFalse(gr.getListOfTests().size()>0);
+		assertEquals(0, gr.getListOfTests().size());
 	}
 
 }
