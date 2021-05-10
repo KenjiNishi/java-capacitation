@@ -565,6 +565,38 @@ Java Database Connectivity (JDBC) is an application programming interface (API) 
 
 # Lecture 19 - Finishing up Databases with JDBC and DAOs
 
+* Remember to apply TDD, it will help when distributing tasks amongst team members.
+
 # Lecture 20 - Presentations and Senior Guests
 
-From HCM, DeBarba (architect) and XXXXX (manager).
+From HCM, DeBarba (architect) and Rafael de Souza (manager).
+
+# Lecture 21 - End of presentations and new sprint.
+
+New Group02 - Job Positions and Salaries
+
+* Sarah
+* Enzo Moura
+* Lucas Ivan
+* Willian K
+* Janaina Mai
+
+# Lecture 22 - Reviewing Design Patterns and TDD - Live coding
+
+[Versioning](semver.org)
+
+[Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
+
+[Writing regex expressions](https://www.geeksforgeeks.org/write-regular-expressions/)
+
+[Creating and Testing regexes Online](www.regex101.com)
+
+* Better documentation with @link and @see to reference other classes.
+
+* Set encoding to UTF-8 so git doesnt break special characters.
+
+* Private methods dont usually need documentation.
+
+# Lecture 23 - Live coding and Hibernate
+
+
