@@ -18,6 +18,10 @@ public class GradesReportController {
 		this.reportDAO = new GradesReportDAO(this.dbReport);
 	}
 
+	public GradesReport getReport() {
+		return this.report;
+	}
+	
 	/**
 	 * Calculates the mean of the CourseTests grades.
 	 * 
@@ -52,10 +56,11 @@ public class GradesReportController {
 	public void addAssessment(Assessment test) {
 		AssessmentController assController = new AssessmentController(test);
 		if(test.getId() != null) {
-			assController.add();	
-		}else {
-			assController.get(test.getId());	
-		}		
+			assController.add();
+		}
+		else {
+			assController.get(test.getId());
+		}
 		this.report.getListOfTests().add(test);
 		this.calculateMeanOfTests();
 	}

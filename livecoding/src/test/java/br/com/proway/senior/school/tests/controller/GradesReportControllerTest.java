@@ -42,21 +42,22 @@ public class GradesReportControllerTest {
 	@Test
 	public void testGetMeanGrades() {
 		controller.clearCourseTests();
-		controller.addCourseTest(test);
-		controller.addCourseTest(test2);
+		controller.addAssessment(test);
+		controller.addAssessment(test2);
 		assertEquals(7.50, gr.getMeanGrade(), 0.01);
 	}
 
 	@Test
 	public void testAddCourseTest() throws Exception {
-		controller.addCourseTest(test);
+		controller.clearCourseTests();
+		controller.addAssessment(test);
 		assertEquals(1, (int) gr.getListOfTests().size());
 	}
 	
 	@Test
 	public void testRemoveCourseTest() throws Exception {
 		controller.clearCourseTests();
-		controller.addCourseTest(test);
+		controller.addAssessment(test);
 		controller.removeCourseTest(0);
 		assertEquals(0, gr.getListOfTests().size());
 	}
@@ -64,14 +65,14 @@ public class GradesReportControllerTest {
 	@Test
 	public void testRemoveCourseTestByObject() throws Exception {
 		controller.clearCourseTests();
-		controller.addCourseTest(test);
-		controller.removeCourseTest(test);
+		controller.addAssessment(test);
+		controller.removeCourseTest(test.getId());
 		assertEquals(0, gr.getListOfTests().size());
 	}
 	
 	@Test
 	public void testClearListOfCourseTest() throws Exception {
-		controller.addCourseTest(test);
+		controller.addAssessment(test);
 		controller.clearCourseTests();
 		assertFalse(gr.getListOfTests().size()>0);
 	}
