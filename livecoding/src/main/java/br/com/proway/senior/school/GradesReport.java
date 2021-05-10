@@ -42,10 +42,15 @@ public class GradesReport {
 	 */
 	private void calculateMeanOfTests() {
 		Double sum = 0.0;
-		for(Avaliation course : this.getListOfTests()) {
-			sum+=course.getGrade();
+		Double weight = 0.0;
+		if(this.getListOfTests().size() > 0){
+			for(Avaliation course : this.getListOfTests()) {
+				sum+=course.getGrade() * course.getWeight();
+				weight += course.getWeight();
+			}
+			setMeanGrade(sum/weight);
 		}
-		setMeanGrade(sum/this.getListOfTests().size());
+		else setMeanGrade(sum/weight);
 	}
 	
 	/**

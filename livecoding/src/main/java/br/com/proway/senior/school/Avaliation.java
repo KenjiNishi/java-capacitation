@@ -18,6 +18,7 @@ public class Avaliation {
 	Double grade;
 	Student student;
 	Course course;
+	Double weight;
 	
 	/**
 	 * In this constructor there is no attribution of grade in the constructor
@@ -25,11 +26,13 @@ public class Avaliation {
 	 * @param period Period in the format YYYYMM
 	 * @param student Student that took this test
 	 * @param course The course related to this test
+	 * @param weight Weight of the evaluation for calculating the mean
 	 */
-	public Avaliation(Integer period, Student student, Course course) {
+	public Avaliation(Integer period, Student student, Course course, Double weight) {
 		this.setPeriod(period);
 		this.setStudent(student);
 		this.setCourse(course);
+		this.setWeight(weight);
 	}
 	
 	public Integer getPeriod() {
@@ -67,6 +70,12 @@ public class Avaliation {
 	}
 	public void setCourse(Course course) {
 		this.course = course;
+	}
+	public void setWeight(Double value) {
+		this.weight = value;
+	}
+	public Double getWeight() {
+		return this.weight;
 	}
 
 }

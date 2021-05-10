@@ -16,7 +16,7 @@ public class CourseTestTest {
 		Course course = new Course();
 		Student student = new Student();
 		
-		test = new Avaliation(period, student, course);
+		test = new Avaliation(period, student, course, 1.0);
 	}
 	
 	@Test
