@@ -2,7 +2,9 @@ package br.com.proway.senior.school;
 
 import java.util.ArrayList;
 
-public class AssessmentDAO {
+import br.com.proway.senior.school.interfaces.IDAO;
+
+public class AssessmentDAO implements IDAO<Assessment>{
 	GradesReport report;
 	
 	public AssessmentDAO(GradesReport report){
