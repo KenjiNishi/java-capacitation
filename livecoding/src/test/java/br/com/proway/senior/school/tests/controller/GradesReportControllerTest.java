@@ -64,7 +64,7 @@ public class GradesReportControllerTest {
 	}
 	
 	@Test
-	public void testRemoveNonExistentCourseTest() thr ows Exception {
+	public void testRemoveNonExistentCourseTest() throws Exception {
 		controller.clearCourseTests();
 		controller.addAssessment(test);
 		controller.removeCourseTest(42);
