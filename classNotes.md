@@ -597,6 +597,8 @@ New Group02 - Job Positions and Salaries
 
 * Private methods dont usually need documentation.
 
-# Lecture 23 - Live coding and Hibernate
+# Lecture 23 - Live coding
+
+# Lecture 24 - Again
 
 
