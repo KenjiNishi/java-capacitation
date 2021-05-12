@@ -488,7 +488,7 @@ HCM Development Coordinator - Silvana Aparecida Da Silva <silvana.silva@senior.c
 
 [PostgreSQL Introduction](https://www.edureka.co/blog/postgresql-tutorial)
 
-![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190826175059/Types-of-SQL-Commands.jpg)
+<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190826175059/Types-of-SQL-Commands.jpg" width="666"/>
 
 ## Verbs
 
@@ -601,4 +601,107 @@ New Group02 - Job Positions and Salaries
 
 # Lecture 24 - Again
 
+# Lecture 25 - Hibernate
 
+Hibernate is a Java ORM library that implements the JPA specification.
+
+Hibernate takes care of the mapping from Java classes to database tables, and from Java data types to SQL data types. In addition, it provides data query and retrieval facilities. It can significantly reduce development time otherwise spent with manual data handling in SQL and JDBC. 
+
+Packages:
+
+* hibernate-core :
+The main (core) Hibernate module. Defines its ORM features and APIs as well as the various integration SPIs.
+
+* hibernate-envers : 
+Hibernate’s historical entity versioning feature
+
+* hibernate-spatial :
+Hibernate’s Spatial/GIS data-type support
+
+* hibernate-osgi :
+Hibernate support for running in OSGi containers.
+
+* hibernate-agroal :
+Integrates the Agroal connection pooling library into Hibernate
+
+* hibernate-c3p0 :
+Integrates the C3P0 connection pooling library into Hibernate
+
+* hibernate-hikaricp :
+Integrates the HikariCP connection pooling library into Hibernate
+
+* hibernate-vibur :
+Integrates the Vibur DBCP connection pooling library into Hibernate
+
+* hibernate-proxool :
+Integrates the Proxool connection pooling library into Hibernate
+
+* hibernate-jcache :
+Integrates the JCache caching specification into Hibernate, enabling any compliant implementation to become a second-level cache provider.
+
+* hibernate-ehcache :
+Integrates the Ehcache caching library into Hibernate as a second-level cache provider.
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/Untitled-66.png" width="666"/>
+
+## ORM - Object Relational Management
+
+The ORM is a layer responsible for managing the communication between the Database and the Data Access Layer.
+
+The term Object/Relational Mapping refers to the technique of mapping data between an object model representation to a relational data model representation.
+
+![](https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/images/architecture/data_access_layers.svg)
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/HBArchi.png" width="666"/>
+
+## JPA - Java Persistence API
+
+Java specification for accessing, persisting and managing data between objects/classes and relational databases.
+
+![](https://i1.wp.com/www.thistechnologylife.com/wp-content/uploads/2020/07/JPA.png)
+
+## Entity Manager
+
+Responsible for managing objects that are or will be registered on the Database.
+
+<img src="https://javabydeveloper.com/wp-content/uploads/2019/12/Jpa-architecture.png" width="800"/>
+
+![](https://www.objectdb.com/files/images/manual/jpa-states.png)
+
+In flush() the changes to the data are reflected in database, but it is still in transaction.flush() MUST be enclosed in a transaction context and you don't have to do it explicitly unless needed (in rare cases), when EntityTransaction.commit() already does that.
+
+## Types
+
+### Entity Type
+
+* Independent, does not depend on another type to make sense in its life cycle.
+* Have a unique identifier
+* Use the @Entity notation from javax.persistence.Entity
+* Must have a public constructor without args so Hibernate can map the object with the SQL type.
+* Must be a high level class - Where Low level classes are the simple workers that perform actions, while high level classes are the management class that orchestrate the low level classes.
+* Can be abstract, inherited or inherited from.
+* Cannot be an Enum or Interface since they dont have constructors.
+* Must not be final or have final methods and or attributes considering that Hibernate needs to inherit from the Entity to create the DAta Object.
+
+### Value Type
+
+They exist inside an Entity, have no life cycle of their own and can be:
+
+* Basic Types - Maps from an individual type of value to a specific column.
+* Embeddable Types - Maps a combination of types to a Table value, not to the database, but to JPA. Use the @Embeaddable notation. Defines a class whose instances are stored as an intrinsic part of an owning entity and share the identity of the entity. Each of the persistent properties or fields of the embedded object is mapped to the database table for the entity. It don’t have own identifier.
+
+## Value Mappings
+
+* @Column - Defines the column name on database
+* @OneToMany, @ManyToOne, @OneToOne - Relationship mapping among Tables
+* Embedded - Receives an Embeaddable class to sabe on database
+## Cascade
+
+Cascades define how the effects on Child Data will be propagated when the Parent Data is modified/deleted.
+
+* ALL
+* PERSIST
+* MERGE
+* REMOVE
+* REFRESH
+* DETACH
