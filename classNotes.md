@@ -695,6 +695,7 @@ They exist inside an Entity, have no life cycle of their own and can be:
 * @Column - Defines the column name on database
 * @OneToMany, @ManyToOne, @OneToOne - Relationship mapping among Tables
 * Embedded - Receives an Embeaddable class to sabe on database
+
 ## Cascade
 
 Cascades define how the effects on Child Data will be propagated when the Parent Data is modified/deleted.
@@ -705,3 +706,7 @@ Cascades define how the effects on Child Data will be propagated when the Parent
 * REMOVE
 * REFRESH
 * DETACH
+
+# Lecture 26 - Hibernate : Criteria Builder
+
+
