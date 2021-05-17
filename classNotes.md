@@ -709,4 +709,6 @@ Cascades define how the effects on Child Data will be propagated when the Parent
 
 # Lecture 26 - Hibernate : Criteria Builder
 
+# Lecture 27 - Hibernate and Foreign Keys
+
 
