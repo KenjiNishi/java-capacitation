@@ -713,3 +713,12 @@ Cascades define how the effects on Child Data will be propagated when the Parent
 
 # Lecture 28 - Not Spring
 
+# Lecture 29 - Presentations and new Sprint
+
+Group 4 - Work Journey Control
+
+Willian K
+Thiago Luiz
+Vitor André
+Leo Pereira
+Sabrina
