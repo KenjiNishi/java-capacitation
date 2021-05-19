@@ -722,3 +722,16 @@ Thiago Luiz
 Vitor André
 Leo Pereira
 Sabrina
+
+Notes for next Sprint(s):
+
+* Set up a good Trello (quality/testCoverage requirements included), do Code Reviews and PullRequests rather than doing your own merges.
+* Refactor Tables Diagram;
+* Implement a generic DAO (maybe not necessary with spring ?);
+* Compartmentalize validations inside controllers;
+* Get implementation suggestions from Slides to Trello's Sprint Backlog;
+* Use JUnit 5!!! (Better stuff)
+* Rotate team 'leadership' (The person that starts meetings and keeps the trello going);
+* Don't forget the 'Next Sprint' slide on the Sprint Review;
+* Custom exceptions;
+
