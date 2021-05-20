@@ -735,3 +735,60 @@ Notes for next Sprint(s):
 * Don't forget the 'Next Sprint' slide on the Sprint Review;
 * Custom exceptions;
 
+# Lecture 30 - Micro Services, RESTFUL APIs
+
+## Centralized applications
+
+	...
+	
+## Distributed applications
+
+The client is responsible for UI, only.
+
+Data storage and Processing is done on the server.
+	
+Advantages:
+* Low cost for updates
+* Device agnostic
+* High Resilience to Erros
+* Scalable
+
+Disadvantages:
+* High traffic consumption
+* Constant maintenance
+
+## [RESTFUL APIs](https://restfulapi.net/)
+
+* Stateless client/server protocol
+* Operations : POST, GET, PUT, DELETE
+* Resources and URIs (Uniform Resource Identifiers)
+* Layer separation
+* Hypermedia
+	
+The 6 REST Principles
+* Uniform interface : By applying the software engineering principle of generality to the component interface, the overall system architecture is simplified and the visibility of interactions is improved. In order to obtain a uniform interface, multiple architectural constraints are needed to guide the behavior of components. REST is defined by four interface constraints: **identification of resources; manipulation of resources through representations; self-descriptive messages; and, hypermedia as the engine of application state**.
+* Stateless : Each request from client to server must contain **all of the information necessary to understand the request**, and cannot take advantage of any stored context on the server. Session **state is therefore kept entirely on the client**.
+* Cacheable : Cache constraints require that the data within a response to a request be implicitly or explicitly labeled as cacheable or non-cacheable. **If a response is cacheable, then a client cache is given the right to reuse that response data for later, equivalent requests**.
+* Client-server : By **separating the user interface concerns from the data storage concerns**, we improve the portability of the user interface across multiple platforms and improve scalability by simplifying the server components.
+* Layered system : The layered system style allows an architecture to be composed of **hierarchical layers by constraining component behavior** such that each component cannot “see” beyond the immediate layer with which they are interacting.
+* Code on demand : REST allows **client functionality to be extended by downloading and executing code in the form of applets or scripts**. This simplifies clients by reducing the number of features required to be pre-implemented.
+
+HTTP Operations
+* POST - Create
+* GET - Read
+* PUT - Update entire object
+* PATCH - Update attributes on object
+* DELETE - Remove
+
+## DTO - Data Transfer Object
+
+A Data Transfer Object is an object that is used to encapsulate data, and send it from one subsystem of an application to another.
+
+DTOs are most commonly used by the Services layer in an N-Tier application to transfer data between itself and the UI layer. The main benefit here is that it reduces the amount of data that needs to be sent across the wire in distributed applications. They also make great models in the MVC pattern.
+
+Another use for DTOs can be to encapsulate parameters for method calls. This can be useful if a method takes more than four or five parameters.
+
+When using the DTO pattern, you would also make use of DTO assemblers. The assemblers are used to create DTOs from Domain Objects, and vice versa.
+
+The conversion from Domain Object to DTO and back again can be a costly process. If you're not creating a distributed application, you probably won't see any great benefits from the pattern, as [Martin Fowler explains here](https://martinfowler.com/bliki/LocalDTO.html).
+	
