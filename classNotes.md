@@ -792,3 +792,11 @@ When using the DTO pattern, you would also make use of DTO assemblers. The assem
 
 The conversion from Domain Object to DTO and back again can be a costly process. If you're not creating a distributed application, you probably won't see any great benefits from the pattern, as [Martin Fowler explains here](https://martinfowler.com/bliki/LocalDTO.html).
 	
+# Lecture 31 - 
+
+# Lecture 32 - Implementing SpringBoot on the Project
+
+
+<img src="https://terasolunaorg.github.io/guideline/5.0.1.RELEASE/en/_images/RequestLifecycle.png" width="800px"/>
+
+
