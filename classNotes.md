@@ -799,4 +799,15 @@ The conversion from Domain Object to DTO and back again can be a costly process.
 
 <img src="https://terasolunaorg.github.io/guideline/5.0.1.RELEASE/en/_images/RequestLifecycle.png" width="800px"/>
 
+# Lecture 33 - Sprint Retrospective
+
+# Lecture 34 - Last touches on the Backend
+
+# Lecture 35 - MicroServices
+
+## Origins of the Internet
+
+Started as a project from the Advanced Research Projects Agency (ARPA) from the USA Defence Departament with the goal of connecting the computers of several Universities across the USA. This network went to grow to what we now call the Internet.
+
+HTTP came to existance soon after and is still used today in its HTML5 version.
 
