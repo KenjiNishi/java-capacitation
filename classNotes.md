@@ -803,7 +803,7 @@ The conversion from Domain Object to DTO and back again can be a costly process.
 
 # Lecture 34 - Last touches on the Backend
 
-# Lecture 35 - MicroServices
+# Lecture 35 - HTTP and Wireframing
 
 ## Origins of the Internet
 
@@ -811,4 +811,130 @@ Started as a project from the Advanced Research Projects Agency (ARPA) from the 
 
 HTTP came to existance soon after and is still used today in its HTML5 version.
 
-# Lecture 36 - 
+# Lecture 36 -  Structure of the Internet
+
+## HTTP Codes
+
+### 1×× Informational
+
+* 100 Continue
+* 101 Switching Protocols
+* 102 Processing
+
+### 2×× Success
+
+* 200 OK
+* 201 Created
+* 202 Accepted
+* 203 Non-authoritative Information
+* 204 No Content
+* 205 Reset Content
+* 206 Partial Content
+* 207 Multi-Status
+* 208 Already Reported
+* 226 IM Used
+
+### 3×× Redirection
+
+* 300 Multiple Choices
+* 301 Moved Permanently
+* 302 Found
+* 303 See Other
+* 304 Not Modified
+* 305 Use Proxy
+* 307 Temporary Redirect
+* 308 Permanent Redirect
+
+### 4×× Client Error
+
+* 400 Bad Request
+* 401 Unauthorized
+* 402 Payment Required
+* 403 Forbidden
+* 404 Not Found
+* 405 Method Not Allowed
+* 406 Not Acceptable
+* 407 Proxy Authentication Required
+* 408 Request Timeout
+* 409 Conflict
+* 410 Gone
+* 411 Length Required
+* 412 Precondition Failed
+* 413 Payload Too Large
+* 414 Request-URI Too Long
+* 415 Unsupported Media Type
+* 416 Requested Range Not Satisfiable
+* 417 Expectation Failed
+* 418 I'm a teapot
+* 421 Misdirected Request
+* 422 Unprocessable Entity
+* 423 Locked
+* 424 Failed Dependency
+* 426 Upgrade Required
+* 428 Precondition Required
+* 429 Too Many Requests
+* 431 Request Header Fields Too Large
+* 444 Connection Closed Without Response
+* 451 Unavailable For Legal Reasons
+* 499 Client Closed Request
+
+### 5×× Server Error
+
+* 500 Internal Server Error
+* 501 Not Implemented
+* 502 Bad Gateway
+* 503 Service Unavailable
+* 504 Gateway Timeout
+* 505 HTTP Version Not Supported
+* 506 Variant Also Negotiates
+* 507 Insufficient Storage
+* 508 Loop Detected
+* 510 Not Extended
+* 511 Network Authentication Required
+* 599 Network Connect Timeout Error
+
+## Internet Layers
+
+<img src="https://www.overcoded.net/wp-content/uploads/170/network-protocol-layers-diagram.jpg" width="800px" />
+
+<img src="https://cdn2.hubspot.net/hub/70217/file-630050248-png/images/models_side_by_side.png" width="800x" />
+
+<img src="https://www.imperva.com/learn/wp-content/uploads/sites/13/2020/02/OSI-7-layers.jpg.webp" width="800px" />
+
+### DNS
+
+The Domain Name System (DNS) is a central part of the internet, providing a way to match names (a website you're seeking) to numbers (the address for the website). Anything connected to the internet - laptops, tablets, mobile phones, websites - has an Internet Protocol (IP) address made up of numbers.
+
+### TCP IP
+
+TCP/IP, in full Transmission Control Protocol/Internet Protocol, standard Internet communications protocols that allow digital computers to communicate over long distances. The Internet is a packet-switched network, in which information is broken down into small packets, sent individually over many different routes at the same time, and then reassembled at the receiving end. TCP is the component that collects and reassembles the packets of data, while IP is responsible for making sure the packets are sent to the right destination. 
+
+## HTML5
+
+Released in 2014, HTML5 is the current implementation of HyperText Markup Language. Similar to XML, its tag and attribute driven.
+
+### HTML Structure and some tags
+
+<img src="https://s3.amazonaws.com/viking_education/web_development/web_app_eng/html5_sectioning_high_level.jpg" width="800px"/>
+
+<img src="https://www.researchgate.net/profile/Muhammad-Pasha-6/publication/323869270/figure/fig3/AS:606182121164801@1521536488788/Structure-of-an-HTML5-Web-Page.png" width="800px"/>
+
+* Head - Metadata related to the document
+* Body - Document content
+
+#### Semantic tags
+
+* main
+* header - 1 per section
+* footer - 1 per section
+* section
+* article
+* nav
+* aside
+
+#### Generic tags
+
+* div - breaks flow
+* span - keeps flow
+
+
