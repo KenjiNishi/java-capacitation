@@ -937,4 +937,20 @@ Released in 2014, HTML5 is the current implementation of HyperText Markup Langua
 * div - breaks flow
 * span - keeps flow
 
+# Lecture 37 - CSS : Cascading Style Sheets
+
+<img src="https://i0.wp.com/www.silocreativo.com/en/wp-content/uploads/2018/08/CSS3-modules.png?resize=602%2C600&quality=100&strip=all&ssl=1" />
+
+Can be declared by:
+
+* External Link
+* <style> tag
+* Attribute style
+
+Instructions are made by using:
+
+* Instructions
+* Selectors
+* Blocks
+
 
