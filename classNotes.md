@@ -955,3 +955,21 @@ Instructions are made by using:
 
 # Lecture 38 - Sprint Retrospective and Senior Talks
 
+# Lecture 39 - Javascript
+
+The predecessor of Javascript was HTML Nextstep in 1989, Mosaic in 1993 and Netscape in 1994. Javascript itself was released in 1995 and currently its in the ECAMAScript version with annual releases.
+
+Javascript as a language:
+
+* Intepreted;
+* Dynamic typed;
+* Client or Server side
+* Object Oriented - Constructed or Prototyped
+
+Multi-Paradigm:
+
+* Event-Driven
+* Imperative - Follows the order of the statements
+* Functional - Functions are primary types
+
+
