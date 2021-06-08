@@ -972,4 +972,25 @@ Multi-Paradigm:
 * Imperative - Follows the order of the statements
 * Functional - Functions are primary types
 
+Javascript variables:
+
+* var : Local scope
+* let : Block scope
+* const : Unchangeable, global scope
+
+Variable types:
+
+* Number (Double precision 64bit)
+* String
+* Boolean
+* null
+* undefined
+* Object (Function, Array, Date, RegExp)
+
+# Lecture 40 - First steps with Angular
+
+* https://angular.io/start
+
+* https://angular.io/tutorial
+
 
