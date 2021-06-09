@@ -993,4 +993,6 @@ Variable types:
 
 * https://angular.io/tutorial
 
+# Lecture 41 - Working with Angular
 
+# Lecture 42 - Angular and AngularBootstrap
