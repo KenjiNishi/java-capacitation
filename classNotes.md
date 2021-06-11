@@ -996,3 +996,7 @@ Variable types:
 # Lecture 41 - Working with Angular
 
 # Lecture 42 - Angular and AngularBootstrap
+
+# Lecture 43 - Connecting Angular Pages
+
+# Lecture 44 - The End.
