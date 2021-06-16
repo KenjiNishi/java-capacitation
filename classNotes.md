@@ -488,7 +488,7 @@ HCM Development Coordinator - Silvana Aparecida Da Silva <silvana.silva@senior.c
 
 [PostgreSQL Introduction](https://www.edureka.co/blog/postgresql-tutorial)
 
-![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190826175059/Types-of-SQL-Commands.jpg)
+<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190826175059/Types-of-SQL-Commands.jpg" width="666"/>
 
 ## Verbs
 
@@ -596,3 +596,407 @@ New Group02 - Job Positions and Salaries
 * Set encoding to UTF-8 so git doesnt break special characters.
 
 * Private methods dont usually need documentation.
+
+# Lecture 23 - Live coding
+
+# Lecture 24 - Again
+
+# Lecture 25 - Hibernate
+
+Hibernate is a Java ORM library that implements the JPA specification.
+
+Hibernate takes care of the mapping from Java classes to database tables, and from Java data types to SQL data types. In addition, it provides data query and retrieval facilities. It can significantly reduce development time otherwise spent with manual data handling in SQL and JDBC. 
+
+Packages:
+
+* hibernate-core :
+The main (core) Hibernate module. Defines its ORM features and APIs as well as the various integration SPIs.
+
+* hibernate-envers : 
+Hibernate’s historical entity versioning feature
+
+* hibernate-spatial :
+Hibernate’s Spatial/GIS data-type support
+
+* hibernate-osgi :
+Hibernate support for running in OSGi containers.
+
+* hibernate-agroal :
+Integrates the Agroal connection pooling library into Hibernate
+
+* hibernate-c3p0 :
+Integrates the C3P0 connection pooling library into Hibernate
+
+* hibernate-hikaricp :
+Integrates the HikariCP connection pooling library into Hibernate
+
+* hibernate-vibur :
+Integrates the Vibur DBCP connection pooling library into Hibernate
+
+* hibernate-proxool :
+Integrates the Proxool connection pooling library into Hibernate
+
+* hibernate-jcache :
+Integrates the JCache caching specification into Hibernate, enabling any compliant implementation to become a second-level cache provider.
+
+* hibernate-ehcache :
+Integrates the Ehcache caching library into Hibernate as a second-level cache provider.
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/Untitled-66.png" width="666"/>
+
+## ORM - Object Relational Management
+
+The ORM is a layer responsible for managing the communication between the Database and the Data Access Layer.
+
+The term Object/Relational Mapping refers to the technique of mapping data between an object model representation to a relational data model representation.
+
+![](https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/images/architecture/data_access_layers.svg)
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/HBArchi.png" width="666"/>
+
+## JPA - Java Persistence API
+
+Java specification for accessing, persisting and managing data between objects/classes and relational databases.
+
+![](https://i1.wp.com/www.thistechnologylife.com/wp-content/uploads/2020/07/JPA.png)
+
+## Entity Manager
+
+Responsible for managing objects that are or will be registered on the Database.
+
+<img src="https://javabydeveloper.com/wp-content/uploads/2019/12/Jpa-architecture.png" width="800"/>
+
+![](https://www.objectdb.com/files/images/manual/jpa-states.png)
+
+In flush() the changes to the data are reflected in database, but it is still in transaction.flush() MUST be enclosed in a transaction context and you don't have to do it explicitly unless needed (in rare cases), when EntityTransaction.commit() already does that.
+
+## Types
+
+### Entity Type
+
+* Independent, does not depend on another type to make sense in its life cycle.
+* Have a unique identifier
+* Use the @Entity notation from javax.persistence.Entity
+* Must have a public constructor without args so Hibernate can map the object with the SQL type.
+* Must be a high level class - Where Low level classes are the simple workers that perform actions, while high level classes are the management class that orchestrate the low level classes.
+* Can be abstract, inherited or inherited from.
+* Cannot be an Enum or Interface since they dont have constructors.
+* Must not be final or have final methods and or attributes considering that Hibernate needs to inherit from the Entity to create the DAta Object.
+
+### Value Type
+
+They exist inside an Entity, have no life cycle of their own and can be:
+
+* Basic Types - Maps from an individual type of value to a specific column.
+* Embeddable Types - Maps a combination of types to a Table value, not to the database, but to JPA. Use the @Embeaddable notation. Defines a class whose instances are stored as an intrinsic part of an owning entity and share the identity of the entity. Each of the persistent properties or fields of the embedded object is mapped to the database table for the entity. It don’t have own identifier.
+
+## Value Mappings
+
+* @Column - Defines the column name on database
+* @OneToMany, @ManyToOne, @OneToOne - Relationship mapping among Tables
+* Embedded - Receives an Embeaddable class to sabe on database
+
+## Cascade
+
+Cascades define how the effects on Child Data will be propagated when the Parent Data is modified/deleted.
+
+* ALL
+* PERSIST
+* MERGE
+* REMOVE
+* REFRESH
+* DETACH
+
+# Lecture 26 - Hibernate : Criteria Builder
+
+# Lecture 27 - Hibernate and Foreign Keys
+
+# Lecture 28 - Not Spring
+
+# Lecture 29 - Presentations and new Sprint
+
+Group 4 - Work Journey Control
+
+Willian K
+Thiago Luiz
+Vitor André
+Leo Pereira
+Sabrina
+
+Notes for next Sprint(s):
+
+* Set up a good Trello (quality/testCoverage requirements included), do Code Reviews and PullRequests rather than doing your own merges.
+* Refactor Tables Diagram;
+* Implement a generic DAO (maybe not necessary with spring ?);
+* Compartmentalize validations inside controllers;
+* Get implementation suggestions from Slides to Trello's Sprint Backlog;
+* Use JUnit 5!!! (Better stuff)
+* Rotate team 'leadership' (The person that starts meetings and keeps the trello going);
+* Don't forget the 'Next Sprint' slide on the Sprint Review;
+* Custom exceptions;
+
+# Lecture 30 - Micro Services, RESTFUL APIs
+
+## Centralized applications
+
+	...
+	
+## Distributed applications
+
+The client is responsible for UI, only.
+
+Data storage and Processing is done on the server.
+	
+Advantages:
+* Low cost for updates
+* Device agnostic
+* High Resilience to Erros
+* Scalable
+
+Disadvantages:
+* High traffic consumption
+* Constant maintenance
+
+## [RESTFUL APIs](https://restfulapi.net/)
+
+* Stateless client/server protocol
+* Operations : POST, GET, PUT, DELETE
+* Resources and URIs (Uniform Resource Identifiers)
+* Layer separation
+* Hypermedia
+	
+The 6 REST Principles
+* Uniform interface : By applying the software engineering principle of generality to the component interface, the overall system architecture is simplified and the visibility of interactions is improved. In order to obtain a uniform interface, multiple architectural constraints are needed to guide the behavior of components. REST is defined by four interface constraints: **identification of resources; manipulation of resources through representations; self-descriptive messages; and, hypermedia as the engine of application state**.
+* Stateless : Each request from client to server must contain **all of the information necessary to understand the request**, and cannot take advantage of any stored context on the server. Session **state is therefore kept entirely on the client**.
+* Cacheable : Cache constraints require that the data within a response to a request be implicitly or explicitly labeled as cacheable or non-cacheable. **If a response is cacheable, then a client cache is given the right to reuse that response data for later, equivalent requests**.
+* Client-server : By **separating the user interface concerns from the data storage concerns**, we improve the portability of the user interface across multiple platforms and improve scalability by simplifying the server components.
+* Layered system : The layered system style allows an architecture to be composed of **hierarchical layers by constraining component behavior** such that each component cannot “see” beyond the immediate layer with which they are interacting.
+* Code on demand : REST allows **client functionality to be extended by downloading and executing code in the form of applets or scripts**. This simplifies clients by reducing the number of features required to be pre-implemented.
+
+HTTP Operations
+* POST - Create
+* GET - Read
+* PUT - Update entire object
+* PATCH - Update attributes on object
+* DELETE - Remove
+
+## DTO - Data Transfer Object
+
+A Data Transfer Object is an object that is used to encapsulate data, and send it from one subsystem of an application to another.
+
+DTOs are most commonly used by the Services layer in an N-Tier application to transfer data between itself and the UI layer. The main benefit here is that it reduces the amount of data that needs to be sent across the wire in distributed applications. They also make great models in the MVC pattern.
+
+Another use for DTOs can be to encapsulate parameters for method calls. This can be useful if a method takes more than four or five parameters.
+
+When using the DTO pattern, you would also make use of DTO assemblers. The assemblers are used to create DTOs from Domain Objects, and vice versa.
+
+The conversion from Domain Object to DTO and back again can be a costly process. If you're not creating a distributed application, you probably won't see any great benefits from the pattern, as [Martin Fowler explains here](https://martinfowler.com/bliki/LocalDTO.html).
+	
+# Lecture 31 - 
+
+# Lecture 32 - Implementing SpringBoot on the Project
+
+
+<img src="https://terasolunaorg.github.io/guideline/5.0.1.RELEASE/en/_images/RequestLifecycle.png" width="800px"/>
+
+# Lecture 33 - Sprint Retrospective
+
+# Lecture 34 - Last touches on the Backend
+
+# Lecture 35 - HTTP and Wireframing
+
+## Origins of the Internet
+
+Started as a project from the Advanced Research Projects Agency (ARPA) from the USA Defence Departament with the goal of connecting the computers of several Universities across the USA. This network went to grow to what we now call the Internet.
+
+HTTP came to existance soon after and is still used today in its HTML5 version.
+
+# Lecture 36 -  Structure of the Internet
+
+## HTTP Codes
+
+### 1×× Informational
+
+* 100 Continue
+* 101 Switching Protocols
+* 102 Processing
+
+### 2×× Success
+
+* 200 OK
+* 201 Created
+* 202 Accepted
+* 203 Non-authoritative Information
+* 204 No Content
+* 205 Reset Content
+* 206 Partial Content
+* 207 Multi-Status
+* 208 Already Reported
+* 226 IM Used
+
+### 3×× Redirection
+
+* 300 Multiple Choices
+* 301 Moved Permanently
+* 302 Found
+* 303 See Other
+* 304 Not Modified
+* 305 Use Proxy
+* 307 Temporary Redirect
+* 308 Permanent Redirect
+
+### 4×× Client Error
+
+* 400 Bad Request
+* 401 Unauthorized
+* 402 Payment Required
+* 403 Forbidden
+* 404 Not Found
+* 405 Method Not Allowed
+* 406 Not Acceptable
+* 407 Proxy Authentication Required
+* 408 Request Timeout
+* 409 Conflict
+* 410 Gone
+* 411 Length Required
+* 412 Precondition Failed
+* 413 Payload Too Large
+* 414 Request-URI Too Long
+* 415 Unsupported Media Type
+* 416 Requested Range Not Satisfiable
+* 417 Expectation Failed
+* 418 I'm a teapot
+* 421 Misdirected Request
+* 422 Unprocessable Entity
+* 423 Locked
+* 424 Failed Dependency
+* 426 Upgrade Required
+* 428 Precondition Required
+* 429 Too Many Requests
+* 431 Request Header Fields Too Large
+* 444 Connection Closed Without Response
+* 451 Unavailable For Legal Reasons
+* 499 Client Closed Request
+
+### 5×× Server Error
+
+* 500 Internal Server Error
+* 501 Not Implemented
+* 502 Bad Gateway
+* 503 Service Unavailable
+* 504 Gateway Timeout
+* 505 HTTP Version Not Supported
+* 506 Variant Also Negotiates
+* 507 Insufficient Storage
+* 508 Loop Detected
+* 510 Not Extended
+* 511 Network Authentication Required
+* 599 Network Connect Timeout Error
+
+## Internet Layers
+
+<img src="https://www.overcoded.net/wp-content/uploads/170/network-protocol-layers-diagram.jpg" width="800px" />
+
+<img src="https://cdn2.hubspot.net/hub/70217/file-630050248-png/images/models_side_by_side.png" width="800x" />
+
+<img src="https://www.imperva.com/learn/wp-content/uploads/sites/13/2020/02/OSI-7-layers.jpg.webp" width="800px" />
+
+### DNS
+
+The Domain Name System (DNS) is a central part of the internet, providing a way to match names (a website you're seeking) to numbers (the address for the website). Anything connected to the internet - laptops, tablets, mobile phones, websites - has an Internet Protocol (IP) address made up of numbers.
+
+### TCP IP
+
+TCP/IP, in full Transmission Control Protocol/Internet Protocol, standard Internet communications protocols that allow digital computers to communicate over long distances. The Internet is a packet-switched network, in which information is broken down into small packets, sent individually over many different routes at the same time, and then reassembled at the receiving end. TCP is the component that collects and reassembles the packets of data, while IP is responsible for making sure the packets are sent to the right destination. 
+
+## HTML5
+
+Released in 2014, HTML5 is the current implementation of HyperText Markup Language. Similar to XML, its tag and attribute driven.
+
+### HTML Structure and some tags
+
+<img src="https://s3.amazonaws.com/viking_education/web_development/web_app_eng/html5_sectioning_high_level.jpg" width="800px"/>
+
+<img src="https://www.researchgate.net/profile/Muhammad-Pasha-6/publication/323869270/figure/fig3/AS:606182121164801@1521536488788/Structure-of-an-HTML5-Web-Page.png" width="800px"/>
+
+* Head - Metadata related to the document
+* Body - Document content
+
+#### Semantic tags
+
+* main
+* header - 1 per section
+* footer - 1 per section
+* section
+* article
+* nav
+* aside
+
+#### Generic tags
+
+* div - breaks flow
+* span - keeps flow
+
+# Lecture 37 - CSS : Cascading Style Sheets
+
+<img src="https://i0.wp.com/www.silocreativo.com/en/wp-content/uploads/2018/08/CSS3-modules.png?resize=602%2C600&quality=100&strip=all&ssl=1" />
+
+Can be declared by:
+
+* External Link
+* <style> tag
+* Attribute style
+
+Instructions are made by using:
+
+* Instructions
+* Selectors
+* Blocks
+
+# Lecture 38 - Sprint Retrospective and Senior Talks
+
+# Lecture 39 - Javascript
+
+The predecessor of Javascript was HTML Nextstep in 1989, Mosaic in 1993 and Netscape in 1994. Javascript itself was released in 1995 and currently its in the ECAMAScript version with annual releases.
+
+Javascript as a language:
+
+* Intepreted;
+* Dynamic typed;
+* Client or Server side
+* Object Oriented - Constructed or Prototyped
+
+Multi-Paradigm:
+
+* Event-Driven
+* Imperative - Follows the order of the statements
+* Functional - Functions are primary types
+
+Javascript variables:
+
+* var : Local scope
+* let : Block scope
+* const : Unchangeable, global scope
+
+Variable types:
+
+* Number (Double precision 64bit)
+* String
+* Boolean
+* null
+* undefined
+* Object (Function, Array, Date, RegExp)
+
+# Lecture 40 - First steps with Angular
+
+* https://angular.io/start
+
+* https://angular.io/tutorial
+
+# Lecture 41 - Working with Angular
+
+# Lecture 42 - Angular and AngularBootstrap
+
+# Lecture 43 - Connecting Angular Pages
+
+# Lecture 44 - The End.
